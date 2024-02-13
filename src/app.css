@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--foreground: #0d1016;
+		--background: #eef1f6;
+		--primary: #334266;
+		--secondary: #8699c6;
+		--accent: #4965a7;
+	}
+
+	.dark {
+		--foreground: #e9ecf2;
+		--background: #090c11;
+		--primary: #99a8cc;
+		--secondary: #394c79;
+		--accent: #5874b6;
+	}
+
+	body {
+		@apply bg-background;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply font-heading;
+	}
+
+	h1 {
+		@apply text-4xl;
+	}
+
+	h2 {
+		@apply text-3xl;
+	}
+
+	h3 {
+		@apply text-2xl;
+	}
+
+	h4 {
+		@apply text-xl;
+	}
+
+	p {
+		@apply font-paragraph;
+	}
+
+	span {
+		@apply font-text;
+	}
+
+	button {
+		@apply font-text;
+	}
+}
