@@ -8,18 +8,16 @@
 <div class="flex flex-grow flex-col items-center justify-center pt-32">
 	<h1 class="sm:text-9xl">English Portfolio</h1>
 	<span class="font-bold text-2xl">Max Lamprecht 2023/24</span>
-	<a
-		href="/starmap"
-		class="mt-32 flex items-center justify-center gap-5 underline font-bold text-3xl hover:text-accent hover:no-underline [&>div>div]:hover:border-foreground"
-		>Explore now
-		<div class="relative h-full">
+	<div class="mt-32 flex items-center justify-center gap-5">
+		<span class="font-bold text-3xl">Explore now</span>
+		<a href="/starmap">
 			<div
-				class="animate-bounce-right absolute flex items-center justify-center bg-background_light rounded-full border-2 hover:border-foreground border-accent aspect-square w-10"
+				class="animate-bounce-right flex items-center justify-center bg-background_light rounded-full border-2 hover:border-foreground border-accent aspect-square w-10"
 			>
 				<ArrowRight class="hover:text-text" />
 			</div>
-		</div>
-	</a>
+		</a>
+	</div>
 </div>
 
 <style>
