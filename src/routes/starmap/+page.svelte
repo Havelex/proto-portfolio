@@ -1,5 +1,12 @@
 <script lang="ts">
-	import StarMap from '$lib/components/StarMap.svelte';
+	import NodeMap from '$lib/components/NodeMap/NodeMap.svelte';
+	import { currentPageTitle } from '$lib/stores/stores';
+
+	let mapRoot: HTMLElement;
+
+	$currentPageTitle = 'Explore';
 </script>
 
-<StarMap />
+<div bind:this={mapRoot}>
+	<NodeMap root={mapRoot} />
+</div>

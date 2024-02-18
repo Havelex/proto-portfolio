@@ -1,7 +1,11 @@
 export type File = {
   name: string;
   type: string;
-  size: number;
+  meta: {
+    size: number;
+    lineCount: number;
+    symbolCount: number;
+  };
   lastModified: Date;
   parent?: Directory;
 };
