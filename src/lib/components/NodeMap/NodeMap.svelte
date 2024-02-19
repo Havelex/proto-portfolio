@@ -4,6 +4,7 @@
 	import TWEEN from '@tweenjs/tween.js';
 	import { generateIcosaheder, type Icosaheder } from './icosaheder';
 	import { Font, FontLoader, TextGeometry } from 'three/examples/jsm/Addons.js';
+	import alata from '$lib/fonts/Alata_Regular.json';
 
 	export let root: HTMLElement;
 	let scene: THREE.Scene;
@@ -41,20 +42,18 @@
 
 			const loader = new FontLoader();
 
-			loader.load('src/lib/fonts/Alata_Regular.json', (font: Font) => {
-				const geometry = new TextGeometry(icosaheder.textProps.text, {
-					font: font,
-					size: 0.2,
-					height: 0.1
-				});
-
-				const textMesh = new THREE.Mesh(geometry, icosaheder.textProps.material);
-				geometry.computeBoundingBox();
-				const textWidth = geometry.boundingBox?.max?.x ?? 0 - (geometry.boundingBox?.min?.x ?? 0);
-				textMesh.position.x = -textWidth / 2;
-
-				scene.add(textMesh);
+			const geometry = new TextGeometry(icosaheder.textProps.text, {
+				font: loader.parse(alata),
+				size: 0.2,
+				height: 0.1
 			});
+
+			const textMesh = new THREE.Mesh(geometry, icosaheder.textProps.material);
+			geometry.computeBoundingBox();
+			const textWidth = geometry.boundingBox?.max?.x ?? 0 - (geometry.boundingBox?.min?.x ?? 0);
+			textMesh.position.x = -textWidth / 2;
+
+			scene.add(textMesh);
 		});
 		renderer.render(scene, camera);
 		renderer.domElement.addEventListener('mousemove', onDocumentMouseMove, false);

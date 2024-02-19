@@ -12,7 +12,7 @@
 		<span class="font-bold text-3xl">Explore now</span>
 		<a href="/starmap">
 			<div
-				class="animate-bounce-right flex items-center justify-center bg-background_light rounded-full border-2 hover:border-foreground border-accent aspect-square w-10"
+				class="animate-bounce-right flex items-center justify-center bg-background_light rounded-full border-2 hover:border-foreground hover:text-accent border-accent aspect-square w-10"
 			>
 				<ArrowRight class="hover:text-text" />
 			</div>
