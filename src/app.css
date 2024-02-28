@@ -7,25 +7,32 @@
 @layer base {
 	:root {
 		--foreground: #0d1016;
-		--background: #eef1f6;
-		--background_light: #fff4fc;
-		--primary: #aa4266;
-		--secondary: #8d0136;
-		--accent: #d95f97;
+		--foreground_pale: #3d4036;
+		--background: #d9dcef;
+		--background_light: #eaeaff;
+		--primary: #394c79;
+		--secondary: #99a8cc;
+		--accent: #5874b6;
 	}
 
 	.dark {
 		--foreground: #e9ecf2;
+		--foreground_pale: #797c82;
 		--background: #090c11;
 		--background_light: #1f242f;
-		--primary: #99a8cc;
-		--secondary: #394c79;
+		--primary: #394c79;
+		--secondary: #99a8cc;
 		--accent: #5874b6;
+	}
+
+	html {
+		@apply h-full;
 	}
 
 	body {
 		@apply bg-background;
 		@apply select-none;
+		@apply h-full;
 	}
 
 	h1,

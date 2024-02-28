@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import { FontLoader, TextGeometry } from 'three/examples/jsm/Addons.js';
+import alata from '$lib/fonts/Alata_Regular.json';
 
 export type Triangle = {
 	sideA: THREE.Vector3;
@@ -10,7 +12,7 @@ export type Icosaheder = {
 	triangles: THREE.Mesh[];
 	hitBox: THREE.Mesh[];
 	hovering: boolean;
-	textProps: { text: string; material: THREE.MeshPhongMaterial };
+	textMesh: THREE.Mesh;
 	onClick: () => void;
 };
 
@@ -95,7 +97,7 @@ export const generateIcosaheder = ({
 	text?: string;
 	textMaterial?: THREE.MeshPhongMaterial;
 	onClick?: () => void;
-}) => {
+}): Icosaheder => {
 	const trueTriangles = triangles
 		.map((triangle) => {
 			return {
@@ -111,6 +113,13 @@ export const generateIcosaheder = ({
 				sideC: triangle.sideC.add(position)
 			};
 		});
+
+	const icosahedronCenter = new THREE.Vector3();
+	trueTriangles.forEach((triangle) => {
+		icosahedronCenter.add(triangle.sideA).add(triangle.sideB).add(triangle.sideC);
+	});
+	icosahedronCenter.divideScalar(trueTriangles.length * 3);
+
 	const triangleMeshes: THREE.Mesh[] = [];
 	const hitBoxMeshes: THREE.Mesh[] = [];
 	trueTriangles.forEach((triangle) => {
@@ -126,11 +135,23 @@ export const generateIcosaheder = ({
 		triangleMeshes.push(triangleMesh);
 		hitBoxMeshes.push(hitBoxMesh);
 	});
+
+	const geometry = new TextGeometry(text, {
+		font: new FontLoader().parse(alata),
+		size: 0.2,
+		height: 0.1
+	});
+
+	const textMesh = new THREE.Mesh(geometry, textMaterial);
+	geometry.computeBoundingBox();
+	const textWidth = geometry.boundingBox?.max?.x ?? 0 - (geometry.boundingBox?.min?.x ?? 0);
+	textMesh.position.x = -textWidth / 2;
+
 	return {
 		triangles: triangleMeshes,
 		hitBox: hitBoxMeshes,
 		hovering: false,
-		textProps: { text, material: textMaterial },
-		onClick: onClick
+		textMesh,
+		onClick
 	};
 };

@@ -6,6 +6,7 @@ export default {
 		extend: {
 			colors: {
 				foreground: 'var(--foreground)',
+				foreground_pale: 'var(--foreground_pale)',
 				background: 'var(--background)',
 				background_light: 'var(--background_light)',
 				primary: 'var(--primary)',
@@ -20,5 +21,5 @@ export default {
 			code: ['JetBrains Mono', 'monospace']
 		}
 	},
-	plugins: []
+	plugins: [require('@tailwindcss/typography')]
 };
