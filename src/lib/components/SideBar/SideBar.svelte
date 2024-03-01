@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { currentPageTitle } from '$lib/stores/stores';
-	import { mockSections } from '$lib/utils/mock';
-	import type { Section } from '$lib/utils/types';
+	import type { Metadata, Section } from '$lib/types/types';
 	import { Search } from 'lucide-svelte';
 
 	$currentPageTitle = 'Explore';
 
-	const sections: Section[] = mockSections;
+	export let sections: Map<string, { path: string; metadata: Metadata }[]>;
 
 	let searchValue = '';
 	const search = () => {};
@@ -26,14 +25,18 @@
 			</button>
 		</div>
 	</div>
-	<div class="flex h-full flex-col gap-7 overflow-y-scroll">
-		{#each sections as section}
+	<div class="flex h-full flex-col gap-7 overflow-y-scroll py-4">
+		{#each sections.entries() as section}
 			<div class="flex flex-col pr-2">
-				<a href={`./${section.name}`} class="flex"><b>{section.name}</b></a>
+				<span class="flex"><b>{section[0]}</b></span>
 				<div class="flex flex-col border-l border-l-foreground_pale">
-					{#each section.items as subsection}
-						<a href={subsection.name} class="ml-4">
-							<span class="text-sm">{subsection.name}</span>
+					{#each section[1] as item}
+						{@const itemName = (() => {
+							const splitted = item.path.split('/');
+							return splitted[splitted.length - 1].split('.')[0];
+						})()}
+						<a href={`./sections/${item.metadata.section}/posts/${itemName}`} class="ml-4">
+							<span class="text-sm">{item.metadata.title}</span>
 						</a>
 					{/each}
 				</div>

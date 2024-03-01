@@ -3,5 +3,5 @@
 </script>
 
 <div class="prose dark:prose-invert">
-	<svelte:component this={data.content} />
+	<svelte:component this={data.explorerGuide.default} />
 </div>

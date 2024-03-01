@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import type { Chapter } from '$lib/utils/types';
+	import type { Chapter } from '$lib/types/types';
 
 	export let chapter: Chapter;
 

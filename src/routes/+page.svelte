@@ -4,7 +4,9 @@
 
 <div class="flex flex-grow flex-col items-center justify-center pt-32">
 	<div>
-		<h1 class="animate-gradient inline-block text-transparent sm:text-9xl">English Portfolio</h1>
+		<h1 class="animate-gradient inline-block h-[1.15em] text-transparent sm:text-9xl">
+			English Portfolio
+		</h1>
 	</div>
 	<span class="text-2xl font-bold">Max Lamprecht 2023/24</span>
 	<div class="mt-32 flex items-center justify-center gap-5">

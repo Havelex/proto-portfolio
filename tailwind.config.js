@@ -15,9 +15,9 @@ export default {
 			}
 		},
 		fontFamily: {
-			heading: ['Staatliches', 'sans-serif'],
-			text: ['Lato', 'sans-serif'],
-			paragraph: ['Lora', 'serif'],
+			heading: ['Lexend Variable', 'sans-serif'],
+			text: ['Epilogue Variable', 'sans-serif'],
+			paragraph: ['Epilogue Variable', 'serif'],
 			code: ['JetBrains Mono', 'monospace']
 		}
 	},

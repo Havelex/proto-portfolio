@@ -23,12 +23,13 @@ export type Chapter = {
 	description: string;
 };
 
-export type SectionItem = {
-	name: string;
-	href: string;
+export type Metadata = {
+	title: string;
+	section?: string;
+	tags?: string;
 };
 
 export type Section = {
 	name: string;
-	items: SectionItem[];
+	items: { path: string; metadata: Metadata }[];
 };
