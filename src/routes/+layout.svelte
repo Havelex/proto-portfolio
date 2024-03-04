@@ -2,6 +2,9 @@
 	import { ModeWatcher } from 'mode-watcher';
 	import '../app.css';
 	import NavBar from '$lib/components/NavBar.svelte';
+	import { currentPageTitle } from '$lib/stores/stores';
+
+	$currentPageTitle = 'Home';
 </script>
 
 <ModeWatcher />

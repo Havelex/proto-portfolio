@@ -1,11 +1,7 @@
-import type { Metadata, Section } from '$lib/types/types';
+import type { Metadata } from '$lib/types/types';
 
-export const loadTopLevelMd = async (name: string) => {
+export const loadMarkdown = async (name: string) => {
 	return await import(`../../markdown/${name}.md`);
-};
-
-export const loadPost = async (name: string) => {
-	return await import(`../../markdown/posts/${name}.md`);
 };
 
 export const loadAllSections = async (): Promise<

@@ -1,11 +1,9 @@
+import { currentPageTitle } from '$lib/stores/stores';
+import type { Metadata } from '$lib/types/types';
+import { loadMarkdown } from '$lib/utils/markdown';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
-	const item = await import(`$lib/markdown/sections/${params.section}/posts/${params.post}`);
-	const postContent = item.default;
-	const { title } = item.metadata;
-	return {
-		postContent,
-		title
-	};
+	const post = await loadMarkdown(params.post);
+	return { post } as { post: { default: any; metadata: Metadata } };
 };

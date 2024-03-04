@@ -1,10 +1,13 @@
 ---
 title: 'Explorer Guide'
+section: 'Guides'
+tags: ['Guide']
+date: '04.03.2024'
 ---
 
-# Explorer Guide
+Greetings traveler!
 
-Greetings traveler! Welcome to my domain containing my English portfolio of 2023/24. Feel free to
+Welcome to my domain containing my English portfolio of 2023/24. Feel free to
 explore all parts and corners of these lands. I hope you enjoy your journey. Refer to the
 **Explorer Guide**.
 
@@ -17,8 +20,11 @@ of those items includes a chance for you to give feedback. (pls no **NSFW**)
 ## Navigation
 
 Besides the navbar, as long as you are at **'/explore'** or below, you may access the sidebar of
-fast travel (_on the left hand side_) to travel to every section and every piece of content. Also, use the
+fast travel (_on the left-hand side_) to travel to every section and every piece of content. Also, use the
 search bar in the navbar to traverse intelligently between general locations or the one in the
 sidebar to reach items of content, which you might be looking for in particular.
+
+> Note
+> The sidebar is by default closed. Toggle it by clicking the **triangle** on the left-hand-side.
 
  <!-- TODO: Table of Contents -->

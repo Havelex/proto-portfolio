@@ -27,6 +27,7 @@ export type Metadata = {
 	title: string;
 	section?: string;
 	tags?: string;
+	date?: string;
 };
 
 export type Section = {
