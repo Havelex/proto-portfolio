@@ -64,10 +64,11 @@
 		</div>
 	{/if}
 	<div class="mx-4 flex h-full w-10 items-center justify-center">
-		<button on:click={() => (open = !open)}>
-			<ChevronsRight
-				class={`${open && 'hover:animate-bounce-left !-rotate-180'} hover:animate-bounce-right size-10 transition-transform duration-300`}
-			/>
+		<button
+			on:click={() => (open = !open)}
+			class={`${open && 'hover:animate-bounce-left'} hover:animate-bounce-right`}
+		>
+			<ChevronsRight class={`${open && '-rotate-180'} size-10 transition-transform duration-300`} />
 		</button>
 	</div>
 </div>
