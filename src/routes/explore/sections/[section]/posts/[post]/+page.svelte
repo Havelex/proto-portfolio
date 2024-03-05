@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { currentPageTitle } from '$lib/stores/stores.js';
+	import { currentPageTitle, selectedItem } from '$lib/stores/stores.js';
 
 	export let data;
 
 	let article: HTMLElement;
 	let wordCount: number;
 
+	$: $selectedItem = data.post.metadata;
 	$: $currentPageTitle = data.post.metadata.title;
 	$: article && (wordCount = article.innerText.split(' ').length);
 </script>
@@ -23,7 +24,7 @@
 			<span>
 				{data.post.metadata.tags &&
 					data.post.metadata.tags.length > 0 &&
-					`${data.post.metadata.tags}`}
+					`${data.post.metadata.tags.sort((a, b) => a.localeCompare(b)).join(', ')}`}
 			</span>
 			<span>Words: {wordCount}</span>
 		</div>

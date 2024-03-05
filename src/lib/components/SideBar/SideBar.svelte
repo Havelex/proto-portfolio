@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { currentPageTitle } from '$lib/stores/stores';
+	import { currentPageTitle, selectedItem } from '$lib/stores/stores';
 	import type { Metadata, Section } from '$lib/types/types';
 	import { ChevronsRight, Search, Triangle } from 'lucide-svelte';
 	import { mode } from 'mode-watcher';
@@ -14,9 +14,41 @@
 	let searchValue = '';
 	let open = false;
 
-	const search = () => {};
-
-	$: filteredSections = sections;
+	$: {
+		filteredSections = sections;
+		if (searchValue.trim().length > 0) {
+			const filteredEntries = [...filteredSections.entries()]
+				.map(([k, v]) => {
+					const filteredItems = v.filter(
+						(val): boolean =>
+							val.metadata.title.toLocaleLowerCase().search(searchValue.toLocaleLowerCase()) !==
+								-1 ||
+							(val.metadata.tags?.some(
+								(tag) => tag.toLocaleLowerCase().search(searchValue.toLocaleLowerCase()) !== -1
+							) ??
+								false)
+					);
+					if (filteredItems.length > 0) return [k, filteredItems];
+					if (k.toLocaleLowerCase().search(searchValue.toLocaleLowerCase()) !== -1) return [k, v];
+					return null;
+				})
+				.filter((entry) => entry !== null);
+			filteredSections = new Map(
+				filteredEntries as
+					| Iterable<
+							readonly [
+								string,
+								{
+									path: string;
+									metadata: Metadata;
+								}[]
+							]
+					  >
+					| null
+					| undefined
+			);
+		}
+	}
 </script>
 
 <div class="flex h-full">
@@ -35,31 +67,37 @@
 						placeholder="Search...again..."
 						class="mx-2 bg-transparent bg-none focus:outline-none"
 					/>
-					<button on:click={search}>
-						<Search class="" />
-					</button>
+					<Search class="" />
 				</div>
 			</div>
 			<div class="flex h-full flex-col gap-7 overflow-y-scroll py-4">
-				{#each sections.entries() as section}
-					<div class="flex flex-col pr-2">
-						<span class="flex"><b>{section[0]}</b></span>
-						<div class="flex flex-col border-l border-l-foreground_pale">
-							{#each section[1] as item}
-								{@const itemName = (() => {
-									const splitted = item.path.split('/');
-									return splitted[splitted.length - 1].split('.')[0];
-								})()}
-								<a
-									href={`/explore/sections/${item.metadata.section}/posts/${itemName}`}
-									class="ml-4"
-								>
-									<span class="text-sm">{item.metadata.title}</span>
-								</a>
-							{/each}
+				{#if [...filteredSections.entries()].length > 0}
+					{#each filteredSections.entries() as section}
+						<div class="flex flex-col pr-2">
+							<span class="flex"><b>{section[0]}</b></span>
+							<div class="flex flex-col border-l border-l-foreground_pale">
+								{#each section[1] as item}
+									{@const itemName = (() => {
+										const splitted = item.path.split('/');
+										return splitted[splitted.length - 1].split('.')[0];
+									})()}
+									<a
+										href={`/explore/sections/${item.metadata.section}/posts/${itemName}`}
+										class={`ml-4 ${
+											item.metadata.section === $selectedItem.section &&
+											item.metadata.title === $selectedItem.title &&
+											'text-accent'
+										}`}
+									>
+										<span class="text-sm">{item.metadata.title}</span>
+									</a>
+								{/each}
+							</div>
 						</div>
-					</div>
-				{/each}
+					{/each}
+				{:else}
+					<div class="flex w-full justify-center">No scrolls match your spell</div>
+				{/if}
 			</div>
 		</div>
 	{/if}

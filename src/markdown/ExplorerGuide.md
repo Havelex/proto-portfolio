@@ -1,14 +1,14 @@
 ---
 title: 'Explorer Guide'
 section: 'Guides'
-tags: ['Guide']
+tags: ['Guide', 'Explore', 'Navigation', 'Structure']
 date: '04.03.2024'
 ---
 
 Greetings traveler!
 
 Welcome to my domain containing my English portfolio of 2023/24. Feel free to
-explore all parts and corners of these lands. I hope you enjoy your journey. Refer to the
+explore all parts and corners of these lands. I hope you enjoy your journey. For help, refer to the
 **Explorer Guide**.
 
 ## Structure

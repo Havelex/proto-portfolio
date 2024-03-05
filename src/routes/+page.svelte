@@ -5,6 +5,9 @@
 	$currentPageTitle = 'Home';
 </script>
 
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
 <div class="flex flex-grow flex-col items-center justify-center pt-32">
 	<div>
 		<h1 class="animate-gradient inline-block h-[1.15em] font-bold text-transparent sm:text-9xl">

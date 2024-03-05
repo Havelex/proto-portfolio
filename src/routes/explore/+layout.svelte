@@ -7,6 +7,9 @@
 	$currentPageTitle = 'Explore';
 </script>
 
+<svelte:head>
+	<title>Explore</title>
+</svelte:head>
 <div class="flex max-h-[calc(100%-64px)] grow pt-6">
 	<SideBar
 		sections={new Map([...data.sections.entries()].sort((e1, e2) => e1[0].localeCompare(e2[0])))}

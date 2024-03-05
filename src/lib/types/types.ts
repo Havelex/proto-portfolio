@@ -26,7 +26,7 @@ export type Chapter = {
 export type Metadata = {
 	title: string;
 	section?: string;
-	tags?: string;
+	tags?: string[];
 	date?: string;
 };
 
