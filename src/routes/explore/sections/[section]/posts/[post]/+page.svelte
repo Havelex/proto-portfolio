@@ -32,7 +32,7 @@
 	<hr
 		class="divide-foreground_pale border-foreground_pale bg-foreground_pale text-foreground_pale"
 	/>
-	<article bind:this={article} class="prose mt-4 dark:prose-invert">
+	<article bind:this={article} class="prose prose-xl mt-4 dark:prose-invert">
 		<svelte:component this={data.post.default}></svelte:component>
 	</article>
 </div>
