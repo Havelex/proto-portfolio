@@ -5,6 +5,8 @@
 	import { mode } from 'mode-watcher';
 	import { slide } from 'svelte/transition';
 	import { quintInOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
 
 	$currentPageTitle = 'Explore';
 
@@ -13,7 +15,16 @@
 	let filteredSections = sections;
 	let searchValue = '';
 	let open = false;
+	let mounted = false;
 
+	onMount(() => {
+		const sideBarOpen = localStorage.getItem('sideBarOpen');
+		(sideBarOpen !== null && (open = JSON.parse(sideBarOpen))) ||
+			localStorage.setItem('sideBarOpen', JSON.stringify(open));
+		mounted = true;
+	});
+
+	$: mounted && browser && localStorage.setItem('sideBarOpen', JSON.stringify(open));
 	$: {
 		filteredSections = sections;
 		if (searchValue.trim().length > 0) {

@@ -17,6 +17,7 @@
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@tailwindcss/typography": "^0.5.10",
 		"@types/eslint": "8.56.0",
+		"@types/node": "^20.11.24",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.17",
@@ -40,13 +41,18 @@
 	"dependencies": {
 		"@fontsource-variable/epilogue": "^5.0.9",
 		"@fontsource-variable/lexend": "^5.0.18",
+		"@planetscale/database": "^1.16.0",
+		"@prisma/adapter-planetscale": "^5.10.2",
+		"@prisma/client": "5.10.2",
 		"@tweenjs/tween.js": "^23.1.1",
 		"@types/react-router-dom": "^5.3.3",
 		"@types/three": "^0.161.2",
+		"dotenv": "^16.4.5",
 		"lucide-svelte": "^0.330.0",
 		"mode-watcher": "^0.2.1",
 		"react-router-dom": "^6.22.2",
 		"three": "^0.161.0",
-		"three-trackballcontrols": "^0.9.0"
+		"three-trackballcontrols": "^0.9.0",
+		"undici": "^6.7.0"
 	}
 }

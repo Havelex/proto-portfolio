@@ -1,9 +1,14 @@
-import { currentPageTitle } from '$lib/stores/stores';
+import { getCommentsFromPost } from '$lib/db/db';
 import type { Metadata } from '$lib/types/types';
 import { loadMarkdown } from '$lib/utils/markdown';
+import type { Comment } from '@prisma/client';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = async ({ params }) => {
+export const load: PageLoad = async ({ params, fetch }) => {
 	const post = await loadMarkdown(params.post);
-	return { post } as { post: { default: any; metadata: Metadata } };
+	const res = await fetch(
+		`/api/comments?title=${post.metadata.title}&section=${post.metadata.section ?? ''}`
+	);
+	const comments = (await res.json()) as Comment[];
+	return { post, comments } as { post: { default: any; metadata: Metadata }; comments: Comment[] };
 };

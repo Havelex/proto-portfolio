@@ -14,8 +14,5 @@
 	<SideBar
 		sections={new Map([...data.sections.entries()].sort((e1, e2) => e1[0].localeCompare(e2[0])))}
 	/>
-	<div class="flex h-full grow flex-col items-center overflow-y-scroll pb-5">
-		<slot />
-	</div>
-	<div class="mx-4 flex h-full w-10 items-center justify-center" />
+	<slot />
 </div>

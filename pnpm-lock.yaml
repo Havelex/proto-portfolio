@@ -11,6 +11,15 @@ dependencies:
   '@fontsource-variable/lexend':
     specifier: ^5.0.18
     version: 5.0.18
+  '@planetscale/database':
+    specifier: ^1.16.0
+    version: 1.16.0
+  '@prisma/adapter-planetscale':
+    specifier: ^5.10.2
+    version: 5.10.2(@planetscale/database@1.16.0)
+  '@prisma/client':
+    specifier: 5.10.2
+    version: 5.10.2(prisma@5.10.2)
   '@tweenjs/tween.js':
     specifier: ^23.1.1
     version: 23.1.1
@@ -20,6 +29,9 @@ dependencies:
   '@types/three':
     specifier: ^0.161.2
     version: 0.161.2
+  dotenv:
+    specifier: ^16.4.5
+    version: 16.4.5
   lucide-svelte:
     specifier: ^0.330.0
     version: 0.330.0(svelte@5.0.0-next.52)
@@ -35,6 +47,9 @@ dependencies:
   three-trackballcontrols:
     specifier: ^0.9.0
     version: 0.9.0(three@0.161.0)
+  undici:
+    specifier: ^6.7.0
+    version: 6.7.0
 
 devDependencies:
   '@sveltejs/adapter-auto':
@@ -52,6 +67,9 @@ devDependencies:
   '@types/eslint':
     specifier: 8.56.0
     version: 8.56.0
+  '@types/node':
+    specifier: ^20.11.24
+    version: 20.11.24
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.0.0
     version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -105,7 +123,7 @@ devDependencies:
     version: 5.3.3
   vite:
     specifier: ^5.0.3
-    version: 5.1.1
+    version: 5.1.1(@types/node@20.11.24)
 
 packages:
 
@@ -370,6 +388,11 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
+  /@fastify/busboy@2.1.1:
+    resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
+    engines: {node: '>=14'}
+    dev: false
+
   /@fontsource-variable/epilogue@5.0.9:
     resolution: {integrity: sha512-Os2UapzsHJkKWSzlFpL9NX8CWJZbsNriWlA2iB1E+itWFSvxySMQzZqbu9QGpsBXr/cR4oiG8TaBzzp05wVoWQ==}
     dev: false
@@ -463,17 +486,48 @@ packages:
     dev: true
     optional: true
 
+  /@planetscale/database@1.16.0:
+    resolution: {integrity: sha512-HNUrTqrd8aTRZYMDcsoZ62s36sIWkMMmKZBOehoCWR2WrfNPKq+Q1yQef5okl3pSVlldFnu2h/dbHjOsDTHXug==}
+    engines: {node: '>=16'}
+    dev: false
+
   /@polka/url@1.0.0-next.24:
     resolution: {integrity: sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==}
     dev: true
 
+  /@prisma/adapter-planetscale@5.10.2(@planetscale/database@1.16.0):
+    resolution: {integrity: sha512-sxNoNr8Ig9WWy94dvNxvvHG7T49RA3HCTGZEiW7s90Tw4yzc05/mnUTnyFflhNryNXVjILzeFL6DqOkXpZCLeQ==}
+    peerDependencies:
+      '@planetscale/database': ^1.15.0
+    dependencies:
+      '@planetscale/database': 1.16.0
+      '@prisma/driver-adapter-utils': 5.10.2
+    dev: false
+
+  /@prisma/client@5.10.2(prisma@5.10.2):
+    resolution: {integrity: sha512-ef49hzB2yJZCvM5gFHMxSFL9KYrIP9udpT5rYo0CsHD4P9IKj473MbhU1gjKKftiwWBTIyrt9jukprzZXazyag==}
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      prisma: 5.10.2
+    dev: false
+
   /@prisma/debug@5.10.2:
     resolution: {integrity: sha512-bkBOmH9dpEBbMKFJj8V+Zp8IZHIBjy3fSyhLhxj4FmKGb/UBSt9doyfA6k1UeUREsMJft7xgPYBbHSOYBr8XCA==}
-    dev: true
+
+  /@prisma/driver-adapter-utils@5.10.2:
+    resolution: {integrity: sha512-Qou/js8VJSmaWiGX5EVXGF83fMZltFnuzkKFOocpDvcI3f5G9WTPf61TKflzs3ZOYe1weRgM9hUk9UR7lgGEwg==}
+    dependencies:
+      '@prisma/debug': 5.10.2
+    dev: false
 
   /@prisma/engines-version@5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9:
     resolution: {integrity: sha512-uCy/++3Jx/O3ufM+qv2H1L4tOemTNqcP/gyEVOlZqTpBvYJUe0tWtW0y3o2Ueq04mll4aM5X3f6ugQftOSLdFQ==}
-    dev: true
 
   /@prisma/engines@5.10.2:
     resolution: {integrity: sha512-HkSJvix6PW8YqEEt3zHfCYYJY69CXsNdhU+wna+4Y7EZ+AwzeupMnUThmvaDA7uqswiHkgm5/SZ6/4CStjaGmw==}
@@ -483,7 +537,6 @@ packages:
       '@prisma/engines-version': 5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9
       '@prisma/fetch-engine': 5.10.2
       '@prisma/get-platform': 5.10.2
-    dev: true
 
   /@prisma/fetch-engine@5.10.2:
     resolution: {integrity: sha512-dSmXcqSt6DpTmMaLQ9K8ZKzVAMH3qwGCmYEZr/uVnzVhxRJ1EbT/w2MMwIdBNq1zT69Rvh0h75WMIi0mrIw7Hg==}
@@ -491,13 +544,11 @@ packages:
       '@prisma/debug': 5.10.2
       '@prisma/engines-version': 5.10.0-34.5a9203d0590c951969e85a7d07215503f4672eb9
       '@prisma/get-platform': 5.10.2
-    dev: true
 
   /@prisma/get-platform@5.10.2:
     resolution: {integrity: sha512-nqXP6vHiY2PIsebBAuDeWiUYg8h8mfjBckHh6Jezuwej0QJNnjDiOq30uesmg+JXxGk99nqyG3B7wpcOODzXvg==}
     dependencies:
       '@prisma/debug': 5.10.2
-    dev: true
 
   /@remix-run/router@1.15.2:
     resolution: {integrity: sha512-+Rnav+CaoTE5QJc4Jcwh5toUpnVLKYbpU6Ys0zqbakqbaLQHeglLVHPfxOiQqdNmUy5C2lXz5dwC6tQNX2JW2Q==}
@@ -641,7 +692,7 @@ packages:
       sirv: 2.0.4
       svelte: 5.0.0-next.52
       tiny-glob: 0.2.9
-      vite: 5.1.1
+      vite: 5.1.1(@types/node@20.11.24)
     dev: true
 
   /@sveltejs/vite-plugin-svelte-inspector@2.0.0(@sveltejs/vite-plugin-svelte@3.0.2)(svelte@5.0.0-next.52)(vite@5.1.1):
@@ -655,7 +706,7 @@ packages:
       '@sveltejs/vite-plugin-svelte': 3.0.2(svelte@5.0.0-next.52)(vite@5.1.1)
       debug: 4.3.4
       svelte: 5.0.0-next.52
-      vite: 5.1.1
+      vite: 5.1.1(@types/node@20.11.24)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -674,7 +725,7 @@ packages:
       magic-string: 0.30.7
       svelte: 5.0.0-next.52
       svelte-hmr: 0.15.3(svelte@5.0.0-next.52)
-      vite: 5.1.1
+      vite: 5.1.1(@types/node@20.11.24)
       vitefu: 0.2.5(vite@5.1.1)
     transitivePeerDependencies:
       - supports-color
@@ -716,6 +767,12 @@ packages:
 
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+    dev: true
+
+  /@types/node@20.11.24:
+    resolution: {integrity: sha512-Kza43ewS3xoLgCEpQrsT+xRo/EJej1y0kVYGiLFE1NEODXGzTfwiC6tXTLMQskn1X4/Rjlh0MQUvx9W+L9long==}
+    dependencies:
+      undici-types: 5.26.5
     dev: true
 
   /@types/prop-types@15.7.11:
@@ -1196,6 +1253,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
+    dev: false
 
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -2214,7 +2276,6 @@ packages:
     requiresBuild: true
     dependencies:
       '@prisma/engines': 5.10.2
-    dev: true
 
   /prismjs@1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
@@ -2728,6 +2789,17 @@ packages:
     hasBin: true
     dev: true
 
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
+
+  /undici@6.7.0:
+    resolution: {integrity: sha512-IcWssIyDN1gk6Mcae44q04oRoWTKrW8OKz0effVK1xdWwAgMPnfpxhn9RXUSL5JlwSikO18R7Ibk7Nukz6kxWA==}
+    engines: {node: '>=18.0'}
+    dependencies:
+      '@fastify/busboy': 2.1.1
+    dev: false
+
   /unist-util-stringify-position@2.0.3:
     resolution: {integrity: sha512-3faScn5I+hy9VleOq/qNbAd6pAx7iH5jYBMS9I1HgQVijz/4mv5Bvw5iw1sC/90CODiKo81G/ps8AJrISn687g==}
     dependencies:
@@ -2762,7 +2834,7 @@ packages:
       unist-util-stringify-position: 2.0.3
     dev: true
 
-  /vite@5.1.1:
+  /vite@5.1.1(@types/node@20.11.24):
     resolution: {integrity: sha512-wclpAgY3F1tR7t9LL5CcHC41YPkQIpKUGeIuT8MdNwNZr6OqOTLs7JX5vIHAtzqLWXts0T+GDrh9pN2arneKqg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2790,6 +2862,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.11.24
       esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.10.0
@@ -2805,7 +2878,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.1.1
+      vite: 5.1.1(@types/node@20.11.24)
     dev: true
 
   /which@2.0.2:
