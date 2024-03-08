@@ -11,7 +11,8 @@ export default {
 				background_light: 'var(--background_light)',
 				primary: 'var(--primary)',
 				secondary: 'var(--secondary)',
-				accent: 'var(--accent)'
+				accent: 'var(--accent)',
+				error: 'var(--error)'
 			}
 		},
 		fontFamily: {

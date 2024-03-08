@@ -6,9 +6,7 @@ import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params, fetch }) => {
 	const post = await loadMarkdown(params.post);
-	const res = await fetch(
-		`/api/comments?title=${post.metadata.title}&section=${post.metadata.section ?? ''}`
-	);
+	const res = await fetch(`/api/comments?title=${params.post}&section=${params.section ?? ''}`);
 	const comments = (await res.json()) as Comment[];
 	return { post, comments } as { post: { default: any; metadata: Metadata }; comments: Comment[] };
 };

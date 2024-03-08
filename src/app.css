@@ -15,6 +15,7 @@
 		--primary: #394c79;
 		--secondary: #99a8cc;
 		--accent: #5874b6;
+		--error: #992020;
 	}
 
 	.dark {
@@ -25,6 +26,7 @@
 		--primary: #394c79;
 		--secondary: #99a8cc;
 		--accent: #5874b6;
+		--error: #ff6060;
 	}
 
 	html {
