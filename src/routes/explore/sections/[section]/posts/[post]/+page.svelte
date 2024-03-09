@@ -44,9 +44,5 @@
 			</article>
 		</div>
 	</div>
-	<CommentList
-		comments={data.comments.sort(
-			(a, b) => Date.parse(b.updatedAt.toString()) - Date.parse(a.updatedAt.toString())
-		)}
-	/>
+	<CommentList comments={data.comments} />
 </div>

@@ -4,7 +4,8 @@ const prisma = new PrismaClient();
 
 export const getCommentsFromPost = async (post: { title: string; section: string }) => {
   return await prisma.comment.findMany({
-    where: { postTitle: post.title, sectionTitle: post.section }
+    where: { postTitle: post.title, sectionTitle: post.section },
+    orderBy: [{ updatedAt: 'desc' }]
   });
 };
 
