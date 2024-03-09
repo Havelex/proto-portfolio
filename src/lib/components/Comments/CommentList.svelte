@@ -113,8 +113,8 @@
 						stroke-linejoin="round"
 						class="lucide lucide-x absolute top-0"
 					>
-						<path d="M18 6 6 18" transition:draw={{ duration: 300 }} />
-						<path d="m6 6 12 12" transition:draw={{ duration: 300 }} />
+						<path d="M18 6 6 18" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
+						<path d="m6 6 12 12" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
 					</svg>
 				{:else}
 					<!-- <MessageSquarePlus size={36} /> -->
@@ -133,9 +133,10 @@
 						<path
 							d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
 							transition:draw={{ duration: 300 }}
+							stroke-dashoffset={0}
 						/>
-						<path d="M12 7v6" transition:draw={{ duration: 300 }} />
-						<path d="M9 10h6" transition:draw={{ duration: 300 }} />
+						<path d="M12 7v6" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
+						<path d="M9 10h6" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
 					</svg>
 				{/if}
 			</button>
