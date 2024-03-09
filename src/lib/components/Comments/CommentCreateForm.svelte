@@ -40,19 +40,19 @@
 			minlength={1}
 			required
 			placeholder="Runes and feedback belong here..."
-			class="mt-2 w-full resize-none rounded-md border-none bg-background_light px-2 text-lg shadow outline-none"
+			class="mt-2 w-full resize-none rounded-md border-none bg-background px-2 text-lg shadow outline-none"
 			bind:this={commentInput}
 			bind:value={commentInputValue}
 		/>
 		<div class="flex gap-4">
 			<button class="" on:click={() => ((commentInputValue = ''), (display = false))}>
-				<Send size={32} />
+				<Send />
 			</button>
 			<button
 				class="text-error"
 				on:click={(e) => (e.preventDefault(), (commentInputValue = ''), (display = false))}
 			>
-				<Trash2 size={32} />
+				<Trash2 />
 			</button>
 		</div>
 	</form>

@@ -7,6 +7,7 @@
 	import { browser } from '$app/environment';
 	import CommentItem from './CommentItem.svelte';
 	import CommentCreateForm from './CommentCreateForm.svelte';
+	import CommentEditForm from './CommentEditForm.svelte';
 
 	export let comments: Comment[];
 
@@ -92,7 +93,7 @@
 </div>
 {#if showComments}
 	<div
-		class="flex w-1/2 flex-col pr-4"
+		class="flex w-1/2 flex-col rounded-md bg-background_light p-4"
 		transition:slide={{ duration: 300, easing: quintInOut, axis: 'x' }}
 	>
 		<div class="flex items-center justify-between">
@@ -119,7 +120,7 @@
 					<!-- <MessageSquarePlus size={36} /> -->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width="33"
+						width="32"
 						height="32"
 						viewBox="0 0 24 24"
 						fill="none"
@@ -141,10 +142,18 @@
 		</div>
 		<hr class="border-foreground" />
 		<CommentCreateForm bind:display={showCreateComment} />
-		<div class="mt-8 flex flex-col gap-8 overflow-x-clip overflow-y-scroll">
+		<div class="mt-8 flex flex-col gap-8 overflow-x-clip overflow-y-scroll px-2">
 			{#each comments as comment (comment.id)}
-				<CommentItem {comment} />
-				<!-- <hr class="border-foreground_pale" /> -->
+				<CommentItem
+					{comment}
+					deleteComment={async () => {
+						console.log('test');
+						const res = await fetch(`/api/comments?id=${comment.id}`, { method: 'DELETE' });
+						return (
+							(res.ok && (comments = comments.filter((c) => c.id !== comment.id)) && true) || false
+						);
+					}}
+				/>
 			{/each}
 		</div>
 	</div>

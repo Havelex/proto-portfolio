@@ -12,9 +12,13 @@
 	$: article && (wordCount = article.innerText.split(' ').length);
 </script>
 
+<svelte:head>
+	<title>{data.post.metadata.title}</title>
+</svelte:head>
+
 <div class="flex h-full grow">
 	<div class="flex h-full grow flex-col items-center overflow-y-scroll pb-5">
-		<div class="flex flex-col gap-4">
+		<div class="flex flex-col gap-4 px-2">
 			<h1>
 				{data.post.metadata.title}
 			</h1>
