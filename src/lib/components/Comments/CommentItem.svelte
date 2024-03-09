@@ -1,14 +1,15 @@
 <script lang="ts">
 	import type { Comment } from '@prisma/client';
-	import { Check, Edit, MessageSquareX, Pen, Trash2, X } from 'lucide-svelte';
+	import { Check, Pen, Trash2, X } from 'lucide-svelte';
 	import CommentEditForm from './CommentEditForm.svelte';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import { goto, invalidateAll } from '$app/navigation';
+	import { invalidateAll } from '$app/navigation';
+	import chineseBible from '$lib/assets/mozart_chinese_bible.jpg';
 
 	export let comment: Comment;
-	export let deleteComment: () => Promise<boolean>;
 
+	let dialog: HTMLDialogElement;
 	let updatedAt: Date = new Date();
 	let beingEdited = false;
 	let contentInEdit: string | null;
@@ -78,7 +79,7 @@
 					<Pen size={20} />
 				</button>
 			{/if}
-			<button class="text-error" on:click={deleteComment}>
+			<button class="text-error" on:click={() => dialog.showModal()}>
 				<Trash2 size={20} />
 			</button>
 		</div>
@@ -90,3 +91,22 @@
 		<span class="indent-4">{comment.content}</span>
 	{/if}
 </div>
+
+<dialog bind:this={dialog}>
+	<div class="flex flex-col gap-5 self-center rounded-md p-4">
+		<h1>U sure?</h1>
+		<div class="flex gap-4">
+			<button
+				class="rounded-xl bg-primary px-4 py-2"
+				on:click={async () => {
+					const res = await fetch(`/api/comments?id=${comment.id}`, { method: 'DELETE' });
+					res.ok && invalidateAll();
+					dialog.close();
+				}}>button</button
+			>
+			<button class="rounded-xl bg-error px-4 py-2" on:click={() => dialog.close()}>
+				<img src={chineseBible} alt="chineseBible" class="h-12" />
+			</button>
+		</div>
+	</div>
+</dialog>

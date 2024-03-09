@@ -1,5 +1,6 @@
 <script lang="ts">
 	import autosize from 'autosize';
+	import { blur } from 'svelte/transition';
 
 	export let content: string | null;
 

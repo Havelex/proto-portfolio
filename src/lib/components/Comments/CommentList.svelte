@@ -7,7 +7,7 @@
 	import { browser } from '$app/environment';
 	import CommentItem from './CommentItem.svelte';
 	import CommentCreateForm from './CommentCreateForm.svelte';
-	import CommentEditForm from './CommentEditForm.svelte';
+	import { invalidateAll } from '$app/navigation';
 
 	export let comments: Comment[];
 
@@ -144,16 +144,7 @@
 		<CommentCreateForm bind:display={showCreateComment} />
 		<div class="mt-8 flex flex-col gap-8 overflow-x-clip overflow-y-scroll px-2">
 			{#each comments as comment (comment.id)}
-				<CommentItem
-					{comment}
-					deleteComment={async () => {
-						console.log('test');
-						const res = await fetch(`/api/comments?id=${comment.id}`, { method: 'DELETE' });
-						return (
-							(res.ok && (comments = comments.filter((c) => c.id !== comment.id)) && true) || false
-						);
-					}}
-				/>
+				<CommentItem {comment} />
 			{/each}
 		</div>
 	</div>
