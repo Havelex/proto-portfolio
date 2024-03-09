@@ -45,7 +45,10 @@
 			bind:value={commentInputValue}
 		/>
 		<div class="flex gap-4">
-			<button class="" on:click={() => ((commentInputValue = ''), (display = false))}>
+			<button
+				class=""
+				on:click|preventDefault={() => ((commentInputValue = ''), (display = false))}
+			>
 				<Send />
 			</button>
 			<button
