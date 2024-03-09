@@ -6,6 +6,7 @@
 	import { browser } from '$app/environment';
 	import { invalidateAll } from '$app/navigation';
 	import chineseBible from '$lib/assets/mozart_chinese_bible.jpg';
+	import mondayLeftMeBroken from '$lib/assets/monday-left-me-broken-cat.gif';
 
 	export let comment: Comment;
 
@@ -106,7 +107,7 @@
 					const res = await fetch(`/api/comments?id=${comment.id}`, { method: 'DELETE' });
 					res.ok && invalidateAll();
 					dialog.close();
-				}}>button</button
+				}}><img src={mondayLeftMeBroken} alt="monday left me broken" class="h-12 w-24" /></button
 			>
 			<button class="rounded-xl bg-error px-4 py-2" on:click={() => dialog.close()}>
 				<img src={chineseBible} alt="chineseBible" class="h-12" />
