@@ -1,8 +1,9 @@
 <script lang="ts">
 	import CommentList from '$lib/components/Comments/CommentList.svelte';
 	import { currentPageTitle, selectedItem } from '$lib/stores/stores.js';
+	import type { PageData } from './$types';
 
-	export let data;
+	export let data: PageData;
 
 	let article: HTMLElement;
 	let wordCount: number;

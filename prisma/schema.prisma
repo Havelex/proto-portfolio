@@ -17,5 +17,5 @@ model Comment {
   updatedAt    DateTime @updatedAt
   postTitle    String   @db.VarChar(32)
   sectionTitle String   @db.VarChar(32)
-  content      String   @db.VarChar(2048)
+  content      String   @db.VarChar(4096)
 }

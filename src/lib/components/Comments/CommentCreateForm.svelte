@@ -50,7 +50,7 @@
 			</button>
 			<button
 				class="text-error"
-				on:click={(e) => (e.preventDefault(), (commentInputValue = ''), (display = false))}
+				on:click|preventDefault={() => ((commentInputValue = ''), (display = false))}
 			>
 				<Trash2 />
 			</button>

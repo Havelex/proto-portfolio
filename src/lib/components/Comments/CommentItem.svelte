@@ -16,6 +16,10 @@
 	let mounted = false;
 
 	onMount(() => {
+		document.body.addEventListener('click', () => {
+			dialog.close();
+		});
+
 		const contentInEditStored = localStorage.getItem('contentInEdit');
 		if (contentInEditStored !== null) {
 			const contentInEditParsed = JSON.parse(contentInEditStored) as {
@@ -79,7 +83,7 @@
 					<Pen size={20} />
 				</button>
 			{/if}
-			<button class="text-error" on:click={() => dialog.showModal()}>
+			<button class="text-error" on:click|stopPropagation={() => dialog.showModal()}>
 				<Trash2 size={20} />
 			</button>
 		</div>
@@ -92,8 +96,8 @@
 	{/if}
 </div>
 
-<dialog bind:this={dialog}>
-	<div class="flex flex-col gap-5 self-center rounded-md p-4">
+<dialog bind:this={dialog} class="bg-transparent bg-none p-0 backdrop:bg-black backdrop:opacity-50">
+	<div class="flex flex-col gap-5 self-center rounded-md bg-background_light p-4">
 		<h1>U sure?</h1>
 		<div class="flex gap-4">
 			<button
