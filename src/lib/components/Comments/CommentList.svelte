@@ -42,7 +42,7 @@
 			{#if showComments}
 				<!-- <MessageSquare size={32} /> -->
 				<svg
-					xmlns="https://www.w3.org/2000/svg"
+					xmlns="http://www.w3.org/2000/svg"
 					width="32"
 					height="32"
 					viewBox="0 0 24 24"
@@ -68,7 +68,7 @@
 			{:else}
 				<!-- <MessageSquareOff size={32} /> -->
 				<svg
-					xmlns="https://www.w3.org/2000/svg"
+					xmlns="http://www.w3.org/2000/svg"
 					width="32"
 					height="32"
 					viewBox="0 0 24 24"
@@ -102,7 +102,7 @@
 				{#if showCreateComment}
 					<!-- <X size={36} /> -->
 					<svg
-						xmlns="https://www.w3.org/2000/svg"
+						xmlns="http://www.w3.org/2000/svg"
 						width="32"
 						height="32"
 						viewBox="0 0 24 24"
@@ -119,7 +119,7 @@
 				{:else}
 					<!-- <MessageSquarePlus size={36} /> -->
 					<svg
-						xmlns="https://www.w3.org/2000/svg"
+						xmlns="http://www.w3.org/2000/svg"
 						width="32"
 						height="32"
 						viewBox="0 0 24 24"
