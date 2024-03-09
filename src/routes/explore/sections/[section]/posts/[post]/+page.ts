@@ -1,4 +1,3 @@
-import { getCommentsFromPost } from '$lib/db/db';
 import type { Metadata } from '$lib/types/types';
 import { loadMarkdown } from '$lib/utils/markdown';
 import type { Comment } from '@prisma/client';
