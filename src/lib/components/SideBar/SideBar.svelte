@@ -3,7 +3,7 @@
 	import type { Metadata, Section } from '$lib/types/types';
 	import { ChevronsRight, Search, Triangle } from 'lucide-svelte';
 	import { mode } from 'mode-watcher';
-	import { slide } from 'svelte/transition';
+	import { draw, fly, slide } from 'svelte/transition';
 	import { quintInOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
@@ -98,7 +98,7 @@
 											item.metadata.section === $selectedItem.section &&
 											item.metadata.title === $selectedItem.title &&
 											'text-accent'
-										}`}
+										} hover:text-secondary`}
 									>
 										<span class="text-sm">{item.metadata.title}</span>
 									</a>
@@ -117,7 +117,15 @@
 			on:click={() => (open = !open)}
 			class={`${open && 'hover:animate-bounce-left'} hover:animate-bounce-right`}
 		>
-			<ChevronsRight class={`${open && '-rotate-180'} size-10 transition-transform duration-300`} />
-		</button>
+			<div
+				class="flex items-center justify-center"
+				in:fly={{ duration: 300, delay: 150, x: -100 }}
+				out:fly={{ duration: 300, x: -100 }}
+			>
+				<ChevronsRight
+					class={`${open && '-rotate-180'} size-10 transition-transform duration-300`}
+				/>
+			</div></button
+		>
 	</div>
 </div>
