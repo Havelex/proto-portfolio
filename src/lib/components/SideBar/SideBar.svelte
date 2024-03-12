@@ -81,35 +81,37 @@
 					<Search class="" />
 				</div>
 			</div>
-			<div class="flex h-full flex-col gap-7 overflow-y-scroll py-4">
-				{#if [...filteredSections.entries()].length > 0}
-					{#each filteredSections.entries() as section}
-						<div class="flex flex-col pr-2">
-							<span class="flex"><b>{section[0]}</b></span>
-							<div class="flex flex-col border-l border-l-foreground_pale">
-								{#each section[1] as item}
-									{@const itemName = (() => {
-										const splitted = item.path.split('/');
-										return splitted[splitted.length - 1].split('.')[0];
-									})()}
-									<a
-										href={`/explore/sections/${item.metadata.section}/posts/${itemName}`}
-										class={`ml-4 ${
-											item.metadata.section === $selectedItem.section &&
-											item.metadata.title === $selectedItem.title &&
-											'text-accent'
-										} hover:text-secondary`}
-									>
-										<span class="text-sm">{item.metadata.title}</span>
-									</a>
-								{/each}
+			{#key filteredSections}
+				<div class="flex h-full flex-col gap-7 overflow-y-scroll py-4">
+					{#if [...filteredSections.entries()].length > 0}
+						{#each filteredSections.entries() as section}
+							<div class="flex flex-col pr-2">
+								<span class="flex"><b>{section[0]}</b></span>
+								<div class="flex flex-col border-l border-l-foreground_pale">
+									{#each section[1] as item}
+										{@const itemName = (() => {
+											const splitted = item.path.split('/');
+											return splitted[splitted.length - 1].split('.')[0];
+										})()}
+										<a
+											href={`/explore/sections/${item.metadata.section}/posts/${itemName}`}
+											class={`ml-4 ${
+												item.metadata.section === $selectedItem.section &&
+												item.metadata.title === $selectedItem.title &&
+												'text-accent'
+											} hover:text-secondary`}
+										>
+											<span class="text-sm">{item.metadata.title}</span>
+										</a>
+									{/each}
+								</div>
 							</div>
-						</div>
-					{/each}
-				{:else}
-					<div class="flex w-full justify-center">No scrolls match your spell</div>
-				{/if}
-			</div>
+						{/each}
+					{:else}
+						<div class="flex w-full justify-center">No scrolls match your spell</div>
+					{/if}
+				</div>
+			{/key}
 		</div>
 	{/if}
 	<div class="mx-4 flex h-full w-10 items-center justify-center">
