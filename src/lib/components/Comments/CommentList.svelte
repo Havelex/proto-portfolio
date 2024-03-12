@@ -7,12 +7,21 @@
 	import { browser } from '$app/environment';
 	import CommentItem from './CommentItem.svelte';
 	import CommentCreateForm from './CommentCreateForm.svelte';
+	import { KeyRound } from 'lucide-svelte';
+	import Modal from '../Modal/Modal.svelte';
+	import MessageSquareOff from '$lib/assets/svgs/MessageSquareOff.svelte';
+	import MessageSquare from '$lib/assets/svgs/MessageSquare.svelte';
+	import X from '$lib/assets/svgs/X.svelte';
+	import MessageSquarePlus from '$lib/assets/svgs/MessageSquarePlus.svelte';
 
 	export let comments: Comment[];
+	export let authorId: string | null;
 
 	let showComments = false;
 	let ready = false;
 	let showCreateComment = false;
+	let authorIdInput: HTMLInputElement;
+	let showKeyModal: boolean;
 
 	onMount(() => {
 		const showCommentsStored = localStorage.getItem('showComments');
@@ -25,6 +34,8 @@
 
 		ready = true;
 	});
+
+	$: ready && authorIdInput && authorIdInput.focus();
 
 	$: ready &&
 		browser &&
@@ -40,114 +51,60 @@
 				class="relative flex h-8 w-8 items-center justify-center"
 			>
 				{#if showComments}
-					<!-- <MessageSquare size={32} /> -->
-					<svg
-						xmlns="https://www.w3.org/2000/svg"
-						width="32"
-						height="32"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						class="lucide lucide-message-square-text absolute"
-					>
-						<path
-							d="M21 15V5a2 2 0 0 0-2-2H9"
-							transition:draw={{ duration: 300 }}
-							stroke-dashoffset={0}
-						/>
-						<path d="m2 2 20 20" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
-						<path
-							d="M3.6 3.6c-.4.3-.6.8-.6 1.4v16l4-4h10"
-							transition:draw={{ duration: 300 }}
-							stroke-dashoffset={0}
-						/>
-					</svg>
+					<MessageSquareOff size={32} />
 				{:else}
-					<!-- <MessageSquareOff size={32} /> -->
-					<svg
-						xmlns="https://www.w3.org/2000/svg"
-						width="32"
-						height="32"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						class="lucide lucide-message-square-off absolute"
-					>
-						<path
-							stroke-dashoffset={0}
-							d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-							transition:draw={{ duration: 300 }}
-						/>
-						<path d="M13 8H7" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
-						<path d="M17 12H7" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
-					</svg>
+					<MessageSquare size={32} />
 				{/if}
 			</button>
 		</div>
 	</div>
 	{#if showComments}
 		<div
-			class="flex w-1/2 flex-col rounded-md bg-background_light p-4"
+			class="flex w-1/2 flex-col rounded-md bg-background_light p-4 shadow-lg shadow-black"
 			transition:slide={{ duration: 300, easing: quintInOut, axis: 'x' }}
 		>
 			<div class="flex items-center justify-between">
 				<h3>{comments?.length} Comment{comments?.length !== 1 ? 's' : ''}</h3>
-				<button on:click={() => (showCreateComment = !showCreateComment)} class="relative size-9">
+				<button
+					on:click|stopPropagation={() =>
+						(authorId && (showCreateComment = !showCreateComment)) || true || (showKeyModal = true)}
+					class="relative size-9"
+				>
 					{#if showCreateComment}
-						<!-- <X size={36} /> -->
-						<svg
-							xmlns="https://www.w3.org/2000/svg"
-							width="32"
-							height="32"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-x absolute top-0"
-						>
-							<path d="M18 6 6 18" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
-							<path d="m6 6 12 12" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
-						</svg>
+						<X size={32} />
+					{:else if authorId}
+						<MessageSquarePlus size={32} />
 					{:else}
-						<!-- <MessageSquarePlus size={36} /> -->
-						<svg
-							xmlns="https://www.w3.org/2000/svg"
-							width="32"
-							height="32"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-message-square-plus absolute top-0"
-						>
-							<path
-								d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-								transition:draw={{ duration: 300 }}
-								stroke-dashoffset={0}
-							/>
-							<path d="M12 7v6" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
-							<path d="M9 10h6" transition:draw={{ duration: 300 }} stroke-dashoffset={0} />
-						</svg>
+						<KeyRound size={32} />
 					{/if}
 				</button>
 			</div>
 			<hr class="border-foreground" />
-			<CommentCreateForm bind:display={showCreateComment} />
+			{#if authorId && showCreateComment}
+				<CommentCreateForm />
+			{/if}
 			<div class="mt-8 flex flex-col gap-8 overflow-x-clip overflow-y-scroll px-2">
 				{#each comments as comment (comment.id)}
-					<CommentItem {comment} />
+					<CommentItem {comment} {authorId} />
 				{/each}
 			</div>
 		</div>
 	{/if}
 {/if}
+<Modal bind:showModal={showKeyModal}>
+	<div class="flex flex-col gap-5 self-center rounded-lg bg-background_light p-2">
+		<form method="POST" action="?/login">
+			<div class="flex flex-col items-center justify-center gap-8 p-8">
+				<label for="author-id"><h3>Enter Super Secret Key pls</h3></label>
+				<input
+					id="author-id"
+					name="author-id"
+					type="password"
+					bind:this={authorIdInput}
+					class="w-full rounded-md p-4 shadow-lg shadow-black"
+				/>
+				<button class="rounded-md bg-accent p-4 shadow-md shadow-black"><h4>Login</h4></button>
+			</div>
+		</form>
+	</div>
+</Modal>

@@ -7,20 +7,18 @@
 	import { invalidateAll } from '$app/navigation';
 	import chineseBible from '$lib/assets/mozart_chinese_bible.jpg';
 	import mondayLeftMeBroken from '$lib/assets/monday-left-me-broken-cat.gif';
+	import Modal from '../Modal/Modal.svelte';
 
 	export let comment: Comment;
+	export let authorId: string | null;
 
-	let dialog: HTMLDialogElement;
 	let updatedAt: Date = new Date();
 	let beingEdited = false;
 	let contentInEdit: string | null;
 	let mounted = false;
+	let showDeletModal = false;
 
 	onMount(() => {
-		document.body.addEventListener('click', () => {
-			dialog.close();
-		});
-
 		const contentInEditStored = localStorage.getItem('contentInEdit');
 		if (contentInEditStored !== null) {
 			const contentInEditParsed = JSON.parse(contentInEditStored) as {
@@ -60,34 +58,38 @@
 				{`${`${updatedAt.getHours()}`.padStart(2, '0')}:${`${updatedAt.getMinutes()}`.padStart(2, '0')}:${`${updatedAt.getSeconds()}`.padStart(2, '0')}`}
 			</span>
 		</div>
-		<div class="flex gap-2">
-			{#if beingEdited}
-				<button
-					type="submit"
-					on:click={async () => (
-						await fetch(`/api/comments?id=${comment.id}`, {
-							method: 'PATCH',
-							body: JSON.stringify(contentInEdit)
-						}),
-						(contentInEdit = null),
-						(beingEdited = !beingEdited),
-						invalidateAll()
-					)}
-				>
-					<Check size={20} />
+		{#if authorId && comment.authorId === authorId}
+			<div class="flex gap-2">
+				{#if beingEdited}
+					<button
+						type="submit"
+						on:click={async () => (
+							await fetch(`/api/comments?id=${comment.id}`, {
+								method: 'PATCH',
+								body: JSON.stringify(contentInEdit)
+							}),
+							(contentInEdit = null),
+							(beingEdited = !beingEdited),
+							invalidateAll()
+						)}
+					>
+						<Check size={20} />
+					</button>
+					<button on:click={() => ((contentInEdit = null), (beingEdited = !beingEdited))}>
+						<X size={20} />
+					</button>
+				{:else}
+					<button
+						on:click={() => ((contentInEdit = comment.content), (beingEdited = !beingEdited))}
+					>
+						<Pen size={20} />
+					</button>
+				{/if}
+				<button class="text-error" on:click|stopPropagation={() => (showDeletModal = true)}>
+					<Trash2 size={20} />
 				</button>
-				<button on:click={() => ((contentInEdit = null), (beingEdited = !beingEdited))}>
-					<X size={20} />
-				</button>
-			{:else}
-				<button on:click={() => ((contentInEdit = comment.content), (beingEdited = !beingEdited))}>
-					<Pen size={20} />
-				</button>
-			{/if}
-			<button class="text-error" on:click|stopPropagation={() => dialog.showModal()}>
-				<Trash2 size={20} />
-			</button>
-		</div>
+			</div>
+		{/if}
 	</div>
 	<hr class="mb-2 border-foreground_pale" />
 	{#if beingEdited}
@@ -97,21 +99,21 @@
 	{/if}
 </div>
 
-<dialog bind:this={dialog} class="bg-transparent bg-none p-0 backdrop:bg-black backdrop:opacity-50">
+<Modal bind:showModal={showDeletModal}>
 	<div class="flex flex-col gap-5 self-center rounded-md bg-background_light p-4">
 		<h1>U sure?</h1>
 		<div class="flex gap-4">
 			<button
 				class="rounded-xl bg-primary px-4 py-2"
-				on:click={async () => {
+				on:click|preventDefault={async () => {
 					const res = await fetch(`/api/comments?id=${comment.id}`, { method: 'DELETE' });
 					res.ok && invalidateAll();
-					dialog.close();
+					showDeletModal = false;
 				}}><img src={mondayLeftMeBroken} alt="monday left me broken" class="h-12 w-24" /></button
 			>
-			<button class="rounded-xl bg-error px-4 py-2" on:click={() => dialog.close()}>
+			<button class="rounded-xl bg-error px-4 py-2" on:click={() => (showDeletModal = false)}>
 				<img src={chineseBible} alt="chineseBible" class="h-12" />
 			</button>
 		</div>
 	</div>
-</dialog>
+</Modal>

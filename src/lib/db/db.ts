@@ -1,4 +1,4 @@
-import { PrismaClient, type Comment } from '@prisma/client';
+import { PrismaClient, type Comment, type Author } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -15,13 +15,15 @@ export const getCommentsFromPost = async (post: {
 export const createComment = async (
   postTitle: string,
   sectionTitle: string,
-  content: string
+  content: string,
+  authorId: string
 ): Promise<Comment> => {
   return await prisma.comment.create({
     data: {
       postTitle: postTitle,
       sectionTitle: sectionTitle,
-      content: content
+      content: content,
+      authorId: authorId
     }
   });
 };
@@ -35,4 +37,8 @@ export const updateComment = async (id: string, content: string): Promise<Commen
 
 export const deleteComment = async (id: string): Promise<Comment> => {
   return await prisma.comment.delete({ where: { id: id } });
+};
+
+export const getAuthorById = async (id: string): Promise<Author | null> => {
+  return await prisma.author.findUnique({ where: { id: id } });
 };

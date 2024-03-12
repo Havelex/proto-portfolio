@@ -36,6 +36,26 @@
 	body {
 		@apply bg-background;
 		@apply h-full;
+		@apply animate-[breathe_2s_ease-in-out_infinite];
+		@apply bg-gradient-to-t;
+		@apply from-primary;
+		@apply via-accent via-15%;
+		@apply to-background;
+		@apply to-80%;
+		@apply bg-[length:100%_400%];
+		@apply custom-bg-animation;
+	}
+
+	.custom-bg-animation {
+		animation: breathe 2.5s ease-in-out infinite alternate;
+	}
+	@keyframes breathe {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 0 12.5%;
+		}
 	}
 
 	h1,

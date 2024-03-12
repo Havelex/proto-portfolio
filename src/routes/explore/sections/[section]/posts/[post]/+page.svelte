@@ -2,9 +2,10 @@
 	import CommentList from '$lib/components/Comments/CommentList.svelte';
 	import { currentPageTitle, selectedItem } from '$lib/stores/stores.js';
 	import { onMount } from 'svelte';
-	import type { PageData } from './$types';
+	import type { ActionData, PageData } from './$types';
 
 	export let data: PageData;
+	export let form: ActionData;
 
 	let article: HTMLElement;
 	let wordCount: number;
@@ -52,6 +53,7 @@
 				</article>
 			</div>
 		</div>
-		<CommentList comments={data.comments} />
+		<CommentList comments={data.comments} authorId={data.authorId} />
+		{#if form?.error}{/if}
 	</div>
 {/if}
