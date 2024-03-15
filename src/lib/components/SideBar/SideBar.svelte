@@ -53,9 +53,7 @@
 	class="absolute top-0 flex h-full w-full flex-col items-center justify-center whitespace-nowrap bg-black bg-opacity-80 px-16 pt-16 backdrop-blur-sm sm:relative sm:w-min sm:items-start sm:bg-transparent sm:pl-16 sm:pr-0 sm:pt-0"
 	transition:slide={{ duration: 300, easing: quintInOut, axis: 'x' }}
 >
-	<div>
-		<SearchBar bind:searchValue />
-	</div>
+	<SearchBar bind:searchValue />
 	{#key filteredSections}
 		<div
 			class="flex h-full flex-col gap-7 overflow-y-scroll py-4 text-background dark:text-foreground sm:bg-transparent sm:text-foreground"
