@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { currentPageTitle, selectedItem } from '$lib/stores/stores';
-	import type { Metadata, Section } from '$lib/types/types';
-	import { ChevronsRight, Search, Triangle } from 'lucide-svelte';
-	import { mode } from 'mode-watcher';
-	import { draw, fly, slide } from 'svelte/transition';
+	import type { Metadata } from '$lib/types/types';
+	import { Search } from 'lucide-svelte';
+	import { slide } from 'svelte/transition';
 	import { quintInOut } from 'svelte/easing';
-	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
+	import SearchBar from './SearchBar.svelte';
 
 	$currentPageTitle = 'Explore';
 
@@ -14,17 +12,6 @@
 
 	let filteredSections = sections;
 	let searchValue = '';
-	let open = false;
-	let mounted = false;
-
-	onMount(() => {
-		const sideBarOpen = localStorage.getItem('sideBarOpen');
-		(sideBarOpen !== null && (open = JSON.parse(sideBarOpen))) ||
-			localStorage.setItem('sideBarOpen', JSON.stringify(open));
-		mounted = true;
-	});
-
-	$: mounted && browser && localStorage.setItem('sideBarOpen', JSON.stringify(open));
 	$: {
 		filteredSections = sections;
 		if (searchValue.trim().length > 0) {
@@ -62,72 +49,47 @@
 	}
 </script>
 
-<div class="flex h-full">
-	{#if open}
-		<div
-			class="flex h-full w-min flex-col whitespace-nowrap pl-16"
-			transition:slide={{ duration: 300, easing: quintInOut, axis: 'x' }}
-		>
-			<div class="pointer-events-none z-10 pb-4 shadow-xl shadow-background">
-				<div
-					class="pointer-events-auto flex rounded-md bg-background_light p-2 shadow shadow-primary"
-				>
-					<input
-						type="text"
-						bind:value={searchValue}
-						placeholder="Search...again..."
-						class="mx-2 bg-transparent bg-none focus:outline-none"
-					/>
-					<Search class="" />
-				</div>
-			</div>
-			{#key filteredSections}
-				<div class="flex h-full flex-col gap-7 overflow-y-scroll py-4">
-					{#if [...filteredSections.entries()].length > 0}
-						{#each filteredSections.entries() as section}
-							<div class="flex flex-col pr-2">
-								<span class="flex"><b>{section[0]}</b></span>
-								<div class="flex flex-col border-l border-l-foreground_pale">
-									{#each section[1] as item}
-										{@const itemName = (() => {
-											const splitted = item.path.split('/');
-											return splitted[splitted.length - 1].split('.')[0];
-										})()}
-										<a
-											href={`/explore/sections/${item.metadata.section}/posts/${itemName}`}
-											class={`ml-4 ${
-												item.metadata.section === $selectedItem.section &&
-												item.metadata.title === $selectedItem.title &&
-												'text-accent'
-											} hover:text-secondary`}
-										>
-											<span class="text-sm">{item.metadata.title}</span>
-										</a>
-									{/each}
-								</div>
-							</div>
-						{/each}
-					{:else}
-						<div class="flex w-full justify-center">No scrolls match your spell</div>
-					{/if}
-				</div>
-			{/key}
-		</div>
-	{/if}
-	<div class="mx-4 flex h-full w-10 items-center justify-center">
-		<button
-			on:click={() => (open = !open)}
-			class={`${open && 'hover:animate-bounce-left'} hover:animate-bounce-right`}
-		>
-			<div
-				class="flex items-center justify-center"
-				in:fly={{ duration: 300, delay: 150, x: -100 }}
-				out:fly={{ duration: 300, x: -100 }}
-			>
-				<ChevronsRight
-					class={`${open && '-rotate-180'} size-10 transition-transform duration-300`}
-				/>
-			</div></button
-		>
+<div
+	class="absolute top-0 flex h-full w-full flex-col items-center justify-center whitespace-nowrap bg-black bg-opacity-80 px-16 pt-16 backdrop-blur-sm sm:relative sm:w-min sm:items-start sm:bg-transparent sm:pl-16 sm:pr-0 sm:pt-0"
+	transition:slide={{ duration: 300, easing: quintInOut, axis: 'x' }}
+>
+	<div>
+		<SearchBar bind:searchValue />
 	</div>
+	{#key filteredSections}
+		<div
+			class="flex h-full flex-col gap-7 overflow-y-scroll py-4 text-background dark:text-foreground sm:bg-transparent sm:text-foreground"
+		>
+			{#if [...filteredSections.entries()].length > 0}
+				{#each filteredSections.entries() as section}
+					<div class="flex flex-col pr-2">
+						<span class="flex text-2xl sm:text-base"><b>{section[0]}</b></span>
+						<div
+							class="flex flex-col gap-2 border-l-2 border-l-foreground_pale sm:flex-col sm:gap-0 sm:border-l"
+						>
+							{#each section[1] as item}
+								{@const itemName = (() => {
+									const splitted = item.path.split('/');
+									return splitted[splitted.length - 1].split('.')[0];
+								})()}
+								<a
+									href={`/explore/sections/${item.metadata.section}/posts/${itemName}`}
+									class={`base:text-base ml-4 text-xl ${
+										$selectedItem &&
+										item.metadata.section === $selectedItem.section &&
+										item.metadata.title === $selectedItem.title &&
+										'text-accent'
+									} hover:text-secondary`}
+								>
+									<span class="text-xl sm:text-sm">{item.metadata.title}</span>
+								</a>
+							{/each}
+						</div>
+					</div>
+				{/each}
+			{:else}
+				<div class="flex w-full justify-center">No scrolls match your spell</div>
+			{/if}
+		</div>
+	{/key}
 </div>

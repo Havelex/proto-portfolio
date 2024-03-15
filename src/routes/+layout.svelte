@@ -16,8 +16,8 @@
 
 <ModeWatcher />
 
-<div class=" h-screen w-screen">
-	<div class="h-16">
+<div class="h-screen w-screen">
+	<div class="hidden h-16 sm:block">
 		<NavBar />
 	</div>
 	{#key data.pathname}
@@ -29,4 +29,8 @@
 			<slot />
 		</main>
 	{/key}
+
+	<div class="block h-16 sm:hidden">
+		<NavBar />
+	</div>
 </div>

@@ -18,12 +18,14 @@
 {#if ready}
 	<div class="flex flex-grow flex-col items-center justify-center pt-32">
 		<div in:scale={{ duration: 300 }} out:scale={{ duration: 300, delay: 100 }}>
-			<h1 class="animate-gradient inline-block h-[1.15em] font-bold text-transparent sm:text-9xl">
+			<h1
+				class="animate-gradient inline-block min-h-[1.15em] text-center font-bold text-transparent sm:text-[9rem]"
+			>
 				English Portfolio
 			</h1>
 		</div>
 		<span
-			class="text-2xl font-bold"
+			class="mt-6 text-2xl font-bold sm:mt-0"
 			in:fly={{ duration: 300, delay: 100, y: -50 }}
 			out:fly={{ duration: 300, y: -150 }}>Max Lamprecht 2023/24</span
 		>
