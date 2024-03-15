@@ -2,32 +2,25 @@
 	import type { Comment } from '@prisma/client';
 	import { quintInOut } from 'svelte/easing';
 
-	import { draw, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import CommentItem from './CommentItem.svelte';
 	import CommentCreateForm from './CommentCreateForm.svelte';
 	import { KeyRound } from 'lucide-svelte';
 	import Modal from '../Modal/Modal.svelte';
-	import MessageSquareOff from '$lib/assets/svgs/MessageSquareOff.svelte';
-	import MessageSquare from '$lib/assets/svgs/MessageSquare.svelte';
 	import X from '$lib/assets/svgs/X.svelte';
 	import MessageSquarePlus from '$lib/assets/svgs/MessageSquarePlus.svelte';
 
 	export let comments: Comment[];
 	export let authorId: string | null;
 
-	let showComments = false;
 	let ready = false;
 	let showCreateComment = false;
 	let authorIdInput: HTMLInputElement;
 	let showKeyModal: boolean;
 
 	onMount(() => {
-		const showCommentsStored = localStorage.getItem('showComments');
-		(showCommentsStored && (showComments = JSON.parse(showCommentsStored))) ||
-			localStorage.setItem('showComments', JSON.stringify(showComments));
-
 		const showCreateCommentStored = localStorage.getItem('showCreateComment');
 		(showCreateCommentStored && (showCreateComment = JSON.parse(showCreateCommentStored))) ||
 			localStorage.setItem('showComments', JSON.stringify(showCreateComment));
@@ -39,58 +32,40 @@
 
 	$: ready &&
 		browser &&
-		(localStorage.setItem('showComments', JSON.stringify(showComments)),
-		localStorage.setItem('showCreateComment', JSON.stringify(showCreateComment)));
+		localStorage.setItem('showCreateComment', JSON.stringify(showCreateComment));
 </script>
 
-{#if ready}
-	<div class="mx-4 flex items-center justify-center">
-		<div class="flex flex-col items-center justify-between">
-			<button
-				on:click={() => (showComments = !showComments)}
-				class="relative flex h-8 w-8 items-center justify-center"
-			>
-				{#if showComments}
-					<MessageSquareOff size={32} />
-				{:else}
-					<MessageSquare size={32} />
-				{/if}
-			</button>
-		</div>
-	</div>
-	{#if showComments}
-		<div
-			class="flex w-1/2 flex-col rounded-md bg-background_light p-4 shadow-lg shadow-black"
-			transition:slide={{ duration: 300, easing: quintInOut, axis: 'x' }}
+<div
+	class="flex w-1/2 flex-col rounded-md bg-background_light p-4 shadow-lg shadow-black"
+	transition:slide={{ duration: 300, easing: quintInOut, axis: 'x' }}
+>
+	<div class="flex items-center justify-between">
+		<h3>{comments?.length} Comment{comments?.length !== 1 ? 's' : ''}</h3>
+		<button
+			on:click|stopPropagation={() =>
+				(authorId && (showCreateComment = !showCreateComment)) || (showKeyModal = true)}
+			class="relative size-9"
 		>
-			<div class="flex items-center justify-between">
-				<h3>{comments?.length} Comment{comments?.length !== 1 ? 's' : ''}</h3>
-				<button
-					on:click|stopPropagation={() =>
-						(authorId && (showCreateComment = !showCreateComment)) || true || (showKeyModal = true)}
-					class="relative size-9"
-				>
-					{#if showCreateComment}
-						<X size={32} />
-					{:else if authorId}
-						<MessageSquarePlus size={32} />
-					{:else}
-						<KeyRound size={32} />
-					{/if}
-				</button>
-			</div>
-			<hr class="border-foreground" />
-			{#if authorId && showCreateComment}
-				<CommentCreateForm />
+			{#if showCreateComment}
+				<X size={32} />
+			{:else if authorId}
+				<MessageSquarePlus size={32} />
+			{:else}
+				<KeyRound size={32} />
 			{/if}
-			<div class="mt-8 flex flex-col gap-8 overflow-x-clip overflow-y-scroll px-2">
-				{#each comments as comment (comment.id)}
-					<CommentItem {comment} {authorId} />
-				{/each}
-			</div>
-		</div>
+		</button>
+	</div>
+	<hr class="border-foreground" />
+	{#if authorId && showCreateComment}
+		<CommentCreateForm />
 	{/if}
-{/if}
+	<div class="mt-8 flex flex-col gap-8 overflow-x-clip overflow-y-scroll px-2">
+		{#each comments as comment (comment.id)}
+			<CommentItem {comment} {authorId} />
+		{/each}
+	</div>
+</div>
+
 <Modal bind:showModal={showKeyModal}>
 	<div class="flex flex-col gap-5 self-center rounded-lg bg-background_light p-2">
 		<form method="POST" action="?/login">

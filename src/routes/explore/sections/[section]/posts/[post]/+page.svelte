@@ -3,21 +3,30 @@
 	import { currentPageTitle, selectedItem } from '$lib/stores/stores.js';
 	import { onMount } from 'svelte';
 	import type { ActionData, PageData } from './$types';
+	import { browser } from '$app/environment';
+	import MessageSquareOff from '$lib/assets/svgs/MessageSquareOff.svelte';
+	import MessageSquare from '$lib/assets/svgs/MessageSquare.svelte';
 
 	export let data: PageData;
 	export let form: ActionData;
 
 	let article: HTMLElement;
 	let wordCount: number;
+	let showComments = false;
 	let ready = false;
 
 	onMount(() => {
+		const showCommentsStored = localStorage.getItem('showComments');
+		(showCommentsStored && (showComments = JSON.parse(showCommentsStored))) ||
+			localStorage.setItem('showComments', JSON.stringify(showComments));
+
 		ready = true;
 	});
 
 	$: $selectedItem = data.post.metadata;
 	$: $currentPageTitle = data.post.metadata.title;
 	$: article && (wordCount = article.innerText.split(' ').length);
+	$: ready && browser && localStorage.setItem('showComments', JSON.stringify(showComments));
 </script>
 
 <svelte:head>
@@ -53,7 +62,24 @@
 				</article>
 			</div>
 		</div>
-		<CommentList comments={data.comments} authorId={data.authorId} />
+
+		<div class="mx-4 flex items-center justify-center">
+			<div class="flex flex-col items-center justify-between">
+				<button
+					on:click={() => (showComments = !showComments)}
+					class="relative flex h-8 w-8 items-center justify-center"
+				>
+					{#if showComments}
+						<MessageSquareOff size={32} />
+					{:else}
+						<MessageSquare size={32} />
+					{/if}
+				</button>
+			</div>
+		</div>
+		{#if showComments}
+			<CommentList comments={data.comments} authorId={data.authorId} />
+		{/if}
 		{#if form?.error}{/if}
 	</div>
 {/if}

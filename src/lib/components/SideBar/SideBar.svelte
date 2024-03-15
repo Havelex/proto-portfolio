@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { currentPageTitle, selectedItem } from '$lib/stores/stores';
 	import type { Metadata } from '$lib/types/types';
-	import { Search } from 'lucide-svelte';
 	import { slide } from 'svelte/transition';
 	import { quintInOut } from 'svelte/easing';
 	import SearchBar from './SearchBar.svelte';

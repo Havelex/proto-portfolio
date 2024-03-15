@@ -59,15 +59,15 @@
 					class={`${showSideBar && 'hover:animate-bounce-left'} hover:animate-bounce-right`}
 				>
 					<div
-						class="flex items-center justify-center"
+						class=" flex items-center justify-center"
 						in:fly={{ duration: 300, delay: 150, x: -100 }}
 						out:fly={{ duration: 300, x: -100 }}
 					>
 						<ChevronsRight
 							class={`${showSideBar && '-rotate-180'} size-10 transition-transform duration-300`}
 						/>
-					</div></button
-				>
+					</div>
+				</button>
 			</div>
 		</div>
 		<slot />
