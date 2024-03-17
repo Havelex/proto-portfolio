@@ -43,7 +43,7 @@
 		<h3>{comments?.length} Comment{comments?.length !== 1 ? 's' : ''}</h3>
 		<button
 			on:click|stopPropagation={() =>
-				(authorId && (showCreateComment = !showCreateComment)) || (showKeyModal = true)}
+				(authorId && ((showCreateComment = !showCreateComment) || true)) || (showKeyModal = true)}
 			class="relative size-9"
 		>
 			{#if showCreateComment}
