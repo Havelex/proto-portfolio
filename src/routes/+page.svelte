@@ -33,7 +33,7 @@
 			<span class="text-3xl font-bold" transition:fly={{ duration: 300, x: -150 }}>Explore now</span
 			>
 			<a
-				href="/explore/sections/Guides/posts/ExplorerGuide"
+				href="/explore/sections/Guides/posts/Introduction"
 				transition:fly={{ duration: 300, x: 150 }}
 			>
 				<div

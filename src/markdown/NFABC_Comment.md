@@ -2,7 +2,7 @@
 title: 'Comment'
 section: 'Notes From A Big Country'
 tags: ['Comment', 'NFABC']
-date: '04.03.2024'
+date: '18.03.2024'
 ---
 
 I found reading those short stories or anecdotes quite enjoyable, as that I would read them

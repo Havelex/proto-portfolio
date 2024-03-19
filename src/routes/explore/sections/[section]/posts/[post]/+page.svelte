@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CommentList from '$lib/components/Comments/CommentList.svelte';
 	import { currentPageTitle, selectedItem } from '$lib/stores/stores.js';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import type { ActionData, PageData } from './$types';
 	import { browser } from '$app/environment';
 	import MessageSquareOff from '$lib/assets/svgs/MessageSquareOff.svelte';
@@ -17,16 +17,17 @@
 
 	onMount(() => {
 		const showCommentsStored = localStorage.getItem('showComments');
-		(showCommentsStored && (showComments = JSON.parse(showCommentsStored))) ||
+		(showCommentsStored !== null && (showComments = JSON.parse(showCommentsStored))) ||
 			localStorage.setItem('showComments', JSON.stringify(showComments));
-
 		ready = true;
 	});
 
+	onDestroy(() => (ready = false));
+
+	$: ready && browser && localStorage.setItem('showComments', JSON.stringify(showComments));
 	$: $selectedItem = data.post.metadata;
 	$: $currentPageTitle = data.post.metadata.title;
 	$: article && (wordCount = article.innerText.split(' ').length);
-	$: ready && browser && localStorage.setItem('showComments', JSON.stringify(showComments));
 </script>
 
 <svelte:head>

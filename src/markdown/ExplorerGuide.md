@@ -2,14 +2,14 @@
 title: 'Explorer Guide'
 section: 'Guides'
 tags: ['Guide', 'Explore', 'Navigation', 'Structure']
-date: '04.03.2024'
+date: '19.03.2024'
 ---
 
-Greetings traveler!
+Ah, it seems as if you have found my scroll of guidance, also known as **"The Explorer Guide"**. May
+it serve to you well and if it doesn't, please send an e-mail to the following address. (Also do so
+if any spells misfire.)
 
-Welcome to my domain containing my English portfolio of 2023/24. Feel free to
-explore all parts and corners of these lands. I hope you enjoy your journey. For help, refer to the
-**Explorer Guide**.
+`lammad20@htl-kaindorf.at`
 
 ## Structure
 
