@@ -2,6 +2,7 @@
 title: 'Nisi Veritas'
 section: 'Final Act'
 tags: ['Lipom']
+date: '30.05.2024'
 ---
 
 ### Lopum Isid

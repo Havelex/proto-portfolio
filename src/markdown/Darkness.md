@@ -2,6 +2,7 @@
 title: 'Darkness'
 section: 'Final Act'
 tags: []
+date: '02.02.2024'
 ---
 
 Darkness is the absence of light. Henceforth, darkness requires light for its very existence. But
