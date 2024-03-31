@@ -1,5 +1,5 @@
 ---
-title: 'Higher Technical Lunatic (Aslyum)'
+title: 'Higher Technical Lunatic-Aslyum'
 section: 'Notes From A Big Country'
 tags: ['Short Story', 'NFABC', 'Notes From A Tiny Country']
 date: '19.03.2024'
