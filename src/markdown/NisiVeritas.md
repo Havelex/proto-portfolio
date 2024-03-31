@@ -19,22 +19,22 @@ sort of deity that can be connected to the **Grimace**.
 Despite being the oldest religion known to man, it was not the only religion. There were countless others, and
 although there have been countless holy wars scattered across time, they all lie in the far past and
 there has been harmony between the religions ever since.  
-That was, until the **Grimace** _blessed_ us all with the **"Gyat"**. Or so the alphas always preach.
-The **Gyat**. A multidimensional relic, containing virtually infinite knowledge and history,
+That was, until the **Grimace** _blessed_ us all with the **"Gyatt"**. Or so the alphas always preach.
+The **Gyatt**. A multidimensional relic, containing virtually infinite knowledge and history,
 especially about the **Grimace** and its surrounding religion. It is so advanced that it has to be
 made by some form of higher being or force, maybe extraterrestrial beings or even the **Grimace**
-itself. Whatever may be the origin of the **Gyat**, its integrity was recognized by everyone,
+itself. Whatever may be the origin of the **Gyatt**, its integrity was recognized by everyone,
 regardless of believes.
 
 This is the kind evidence that live religion hopes for, to prove that they are the _true_ one and
 that the other ones where all _wrong_. However, simply proving the other religions wrong wasn't
-enough. Many people converted to **Skibidism**, as they deemed the **Gyat** as sufficient proof that
+enough. Many people converted to **Skibidism**, as they deemed the **Gyatt** as sufficient proof that
 this was the true religion. Nevertheless, there were yet countless others who would not give up
 their believes so easily. Yet, it did not matter, as there were outnumbered and no one cared for
 their religions and believes anymore. Worse, in each realm the **Skibidis** gained dominion, they
 declared anything else than **Skibidism** illegal. This also included **Atheism**. And anyone who
 would violate those laws, was hunted and exterminated. Henceforth, it was not long after the
-spawning of the **Gyat** that the whole world fell under **Skibidistic** control and became a
+spawning of the **Gyatt** that the whole world fell under **Skibidistic** control and became a
 Theocracy.
 
 And so it has been for eons. On top the **alphas**, _closest_ to the **Grimace** and reigning over
@@ -54,14 +54,14 @@ although they are technically not in the chain of command, it has established it
 **omegas** are inferior to **deltas**.
 
 On closer examination, this whole social structure is not so far off from the one present in the
-days before the spawning of the **Gyat**. However, the freedom the people once had is now gone.
+days before the spawning of the **Gyatt**. However, the freedom the people once had is now gone.
 Surely, there are some who do not mind about this at all. The **alphas**, **betas**, **gammas** and
 probably even most of the **deltas** don't seem to care. Why would they? But the **omegas**, don't
 have it as easy as they do, not that they have any power to change anything and of course there have
 been attempts. All unsuccessful.
 
 The original **alphas** are to blame for why the **Skibidis** where able to gain total control so
-quickly and without much (significant) resistance. Legend has it, that the **Gyat** gave group of
+quickly and without much (significant) resistance. Legend has it, that the **Gyatt** gave group of
 people a tremendous power known as **"rizz"** and they became the first **alphas**. They were only a
 hand full, but they had unspoken **rizz** so powerful, that no army in the world was able to pose a
 real challenge to them, and they destroyed anyone who opposed them.
