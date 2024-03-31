@@ -26,7 +26,7 @@ made by some form of higher being or force, maybe extraterrestrial beings or eve
 itself. Whatever may be the origin of the **Gyat**, its integrity was recognized by everyone,
 regardless of believes.
 
-This was the evidence that every live religion hopes for, to prove that they are the _true_ one and
+This is the kind evidence that live religion hopes for, to prove that they are the _true_ one and
 that the other ones where all _wrong_. However, simply proving the other religions wrong wasn't
 enough. Many people converted to **Skibidism**, as they deemed the **Gyat** as sufficient proof that
 this was the true religion. Nevertheless, there were yet countless others who would not give up
