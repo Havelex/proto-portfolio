@@ -7,22 +7,22 @@ date: '19.03.2024'
 
 Greetings traveler!
 
-You have entered my domain and shall gain access to all my knowledge contained within these
-dimensions. As faith has once decided, I was a traveler once, too and this construct is a library of
-my very own journey. As you traverse these lands you shall be enlightened by my wisdom.
+Thou hast entered mine domain and shall gain access to all mine knowledge contained within these
+dimensions. As faith hath once decided, I was a traveler once, too and this construct is a library
+of mine most own journey. As thou traverse these lands thou shall be enlightened by mine wit.
 
-Every scroll you find is hand-crafted and composed by myself and the script behind it all is truly
-magical. You will traverse across many different kingdoms of topics, each of them keeping scrolls
-which contain their kingdom's forbidden lore and are waiting to be discovered. It sounds complicated
-but in reality it is all very orderly structured.
+Every scroll thou find is hand-crafted and composed by myself and the script behind it all is
+forsooth magical. Thou shall traverse across many diverse kingdoms of topics, each of 'em keeping
+scrolls which contain their kingdom's forbidden lore and are waiting to be discovered. It sounds
+complicated yet 'i reality it is all most orderly structured.
 
-However, should you ever find yourself lost, I have prepared one of my scrolls to provide you with
-guidance. This spell will take you to the
-[Explorer Guide](/explore/sections/Guides/posts/ExplorerGuide).
+Alas, should'st thou aye find yourself lost, I hast prepared one of mine scrolls to provide thou
+with guidance. This spell shall take thou to the
+[explorer guide](/explore/sections/guides/posts/explorerguide).
 
-And one last thing. When crossing through the kingdom of my final act, take your time as them
-manuscripts that can be found there are more than just some scriptures. They shall enlighten anyone
-who dares to read them and allow their wisdom to enter their minds.
+And one last thing. Wherein crossing through the kingdom of mine final act, take thy time as 'em
+manuscripts that can be found there are moe than just some scriptures. They shall enlighten anyone
+whom dares to read 'em and allow their wit to enter their minds.
 
-Now, you shall wander off to explore everything this domain has to offer. May your journey be
-enjoyable and your reviews of good feedback.
+Now, thou shall wander off to explore all's this domain hath to offer. May thy journey be enjoyable
+and thy reviews of good feedback.
