@@ -1,7 +1,7 @@
 ---
 title: 'Nisi Veritas'
-section: 'Final Act'
-tags: ['Lipom']
+section: 'Lipom'
+tags: ['Lipom', 'Final Act']
 date: '30.05.2024'
 ---
 
@@ -10,7 +10,7 @@ date: '30.05.2024'
 **The "Grimace"**.  
 Some say it is an all powerful force, responsible for the existence and preservation of our
 universe, others believe that it is a deity with infinite power and control. Whomever you may
-believe, they have one thing in common. Their devoted worshiping for it. Not out of love, but out of
+believe, they have one thing in common. Their devoted worship for it. Not out of love, but out of
 fear. No one knows where those believes have originated from or why, but evidently it has been
 here since the most ancient times of humanity, as our first books mention it, and furthermore, there
 are whole monoliths, older than all the books discovered, dedicated to the **Grimace**, but even
@@ -27,11 +27,11 @@ made by some form of higher being or force, maybe extraterrestrial beings or eve
 itself. Whatever may be the origin of the **Gyatt**, its integrity was recognized by everyone,
 regardless of believes.
 
-This is the kind evidence that live religion hopes for, to prove that they are the _true_ one and
+This is the kind evidence that every religion hopes for, to prove that they are the _true_ one and
 that the other ones where all _wrong_. However, simply proving the other religions wrong wasn't
 enough. Many people converted to **Skibidism**, as they deemed the **Gyatt** as sufficient proof that
 this was the true religion. Nevertheless, there were yet countless others who would not give up
-their believes so easily. Yet, it did not matter, as there were outnumbered and no one cared for
+their believes so easily. Yet, it did not matter, as they were outnumbered and no one cared for
 their religions and believes anymore. Worse, in each realm the **Skibidis** gained dominion, they
 declared anything else than **Skibidism** illegal. This also included **Atheism**. And anyone who
 would violate those laws, was hunted and exterminated. Henceforth, it was not long after the
@@ -58,8 +58,8 @@ On closer examination, this whole social structure is not so far off from the on
 days before the spawning of the **Gyatt**. However, the freedom the people once had is now gone.
 Surely, there are some who do not mind about this at all. The **alphas**, **betas**, **gammas** and
 probably even most of the **deltas** don't seem to care. Why would they? But the **omegas**, don't
-have it as easy as they do, not that they have any power to change anything and of course there have
-been attempts. All unsuccessful.
+have it as easy as the others do, not that they have any power to change anything and of course
+there have been attempts. All unsuccessful.
 
 The original **alphas** are to blame for why the **Skibidis** where able to gain total control so
 quickly and without much (significant) resistance. Legend has it, that the **Gyatt** gave group of

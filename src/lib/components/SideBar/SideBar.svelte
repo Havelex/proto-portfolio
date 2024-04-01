@@ -60,7 +60,7 @@
 			{#if [...filteredSections.entries()].length > 0}
 				{#each filteredSections.entries() as section}
 					<div class="flex flex-col pr-2">
-						<span class="flex text-2xl sm:text-base"><b>{section[0]}</b></span>
+						<button class="flex text-2xl sm:text-base"><b>{section[0]}</b></button>
 						<div
 							class="flex flex-col gap-2 border-l-2 border-l-foreground_pale sm:flex-col sm:gap-0 sm:border-l"
 						>
