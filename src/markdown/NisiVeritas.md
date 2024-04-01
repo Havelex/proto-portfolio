@@ -17,9 +17,9 @@ are whole monoliths, older than all the books discovered, dedicated to the **Gri
 more venerable are the cave paintings and relics from most primitive times, that clearly depict some
 sort of deity that can be connected to the **Grimace**.
 
-Despite being the oldest religion known to man, it was not the only religion. There were countless others, and
-although there have been countless holy wars scattered across time, they all lie in the far past and
-there has been harmony between the religions ever since.  
+Despite being the oldest religion known to man, it was not the only religion. There were countless
+others, and although there have been countless holy wars scattered across time, they all lie in the
+far past and there has been harmony between the religions ever since.  
 That was, until the **Grimace** _blessed_ us all with the **"Gyatt"**. Or so the alphas always preach.
 The **Gyatt**. A multidimensional relic, containing virtually infinite knowledge and history,
 especially about the **Grimace** and its surrounding religion. It is so advanced that it has to be
