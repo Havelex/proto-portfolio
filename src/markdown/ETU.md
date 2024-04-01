@@ -35,7 +35,7 @@ no return."
 
 "Now, there is no more time to lose. You should start by reading the first entry of the **Super
 Emergency Protocol**
-_'[SEP_0000](https://htbla-kaindorf.at/explore/sections/Final%20Act/posts/SEP_0000)'_. It will explain how
+_'[SEP_0000](/explore/sections/Final%20Act/posts/SEP_0000)'_. It will explain how
 to proceed further", **EQICA** tells you. "I wish you good probabilities Captain!"
 
-_Go to '[SEP_0000](https://htbla.kaindorf.at/explore/sections/Final%20Act/posts/SEP_0000)'!_
+_Go to '[SEP_0000](/explore/sections/Final%20Act/posts/SEP_0000)'!_
