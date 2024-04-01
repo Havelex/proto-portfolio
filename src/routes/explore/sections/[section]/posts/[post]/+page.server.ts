@@ -6,9 +6,10 @@ export const load: PageServerLoad = async ({ cookies }) => {
 	return {
 		authorId: authorId
 			? await (async () => {
-					const res = getAuthorById(JSON.parse(authorId));
-					return (await res)?.id;
-				})()
+				if (authorId === 'undefined') return;
+				const res = getAuthorById(JSON.parse(authorId));
+				return (await res)?.id;
+			})()
 			: null
 	};
 };
