@@ -20,6 +20,12 @@ Alas, should'st thou aye find yourself lost, I hast prepared one of mine scrolls
 with guidance. This spell shall take thou to the
 [explorer guide](/explore/sections/guides/posts/explorerguide).
 
+> Read it if thou see no scrolls!
+
+Lamentably, I hast to announce that this is the last portfolio to be aye compiled by myself. Now
+our time does call upon's to pass this suffering onto the next generation of wordsmiths. May the
+tasks thou give by lied upon those promising souls from now on and hast 'em carry on our legacy.
+
 And one last thing. Wherein crossing through the kingdom of mine final act, take thy time as 'em
 manuscripts that can be found there are moe than just some scriptures. They shall enlighten anyone
 whom dares to read 'em and allow their wit to enter their minds.

@@ -1,7 +1,7 @@
 ---
 title: 'Escape the Unescapable'
 section: 'Escape Room'
-tags: ['Escape Room']
+tags: ['Final Act', 'Escape Room']
 date: '30.05.2024'
 ---
 
