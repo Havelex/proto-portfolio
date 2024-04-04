@@ -1,7 +1,7 @@
 ---
 title: 'Nisi Veritas'
 section: 'Lipom'
-tags: ['Lipom', 'Final Act']
+tags: ['Lipom', 'Final Act', 'Brain Rot']
 date: '30.05.2024'
 ---
 

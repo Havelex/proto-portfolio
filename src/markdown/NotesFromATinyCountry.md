@@ -29,22 +29,22 @@ if you brought your grandma with you inside an **"HTL"** even she would be able 
 computers there.
 
 Regarding the entities that roam inside an **"HTL"**, there are three different kinds: Students,
-teachers and "pensioners", who teach the technical subjects, such as programming.
+teachers and elderly people, who teach the technical subjects, such as programming.
 The students are harmless really, since they suffer from sever mental health issues, probably
 induced by the school itself. Nevertheless, some students have adapted to survive in these
 circumstances and some even manage to crack a smile once or twice a day.  
 The teachers are the only normal and frankly working part of the school. Why is that so? Because,
 they have studied not only the subjects they teach, but also how to teach them. In contrast, the
-pensioners, who technically are teachers, did not study how to teach what they teach. They are
-people who have worked in the industry, grew tired of it and decided to retire early by becoming
-teachers to give their knowledge to the next generation and gain about three months of paid
-vacation. What a life.
+elders, who technically are teachers, did not study how to teach what they teach. They are people
+who have worked in the industry, grew tired of it and decided to retire early by becoming teachers
+to give their knowledge to the next generation and gain about three months of paid vacation.  
+What a life.
 
 Unfortunately, as aforementioned, they did not properly study the ways of teaching or even want to
 really teach, which means that most of the time a handful of students teach themselves what the
-pensioners (teachers) should have taught them, so that they can in turn teach it to the rest of the
-class. Students give up their precious leisure time to teach what the teachers should have taught,
-teachers don't have to do anything, everyone is happy.
+ancient ones should have taught them, so that they can in turn teach it to the rest of the class.
+Students give up their precious leisure time to teach what the teachers should have taught, teachers
+don't have to do anything, everyone is happy.
 
-However, I want to make clear, that a lot of the "pensioners" try really hard to teach and even give
-up their own free time to study new technologies they can teach their pupils.
+However, I want to make clear, that a lot of the elderly teachers try really hard to teach and even
+give up their own free time to study new technologies they can teach their pupils.

@@ -16,7 +16,9 @@ Furthermore, a quick shout out to Ms. Neumeister, who has been exceptional since
 absolutely great to work with, and despite only teaching us for just barely over half a year now, I
 have already taken notice of my English improving through her efforts. Her class is very
 educational, and she should be proud of herself and her effectiveness at such a young age. _(Except
-for that one exercise in the first revision paper. That was just diabolical.)_
+for that one exercise in the first revision paper. That was just diabolical.)_.  
+Last but not least, I have to thank Jakob for being such a motivating and great friend. Without him,
+I would have not achieved what I did in all those years. Blud is a real one.
 
 #### Speaking
 
