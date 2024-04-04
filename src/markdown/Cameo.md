@@ -5,7 +5,7 @@ tags: ['Final Act', 'Cameo']
 date: '04.03.2024'
 ---
 
-# Alas Peace
+# Alas, ... Peace
 
 You try to concentrate, as your eyes are adjusting to the rapid change of brightness one last time.
 When taking a closer look around yourself, you realize, that you are standing on a hill, which
