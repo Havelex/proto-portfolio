@@ -18,7 +18,7 @@ of environment or other subtle, but frequent factors, or a person changes instan
 experiencing a trauma, an accident, an incident, having met someone or being the witness to
 something horrible.  
 Sometimes, good people turn evil, sometimes it is the other way around and if so, they shall be
-given to show regret and chasing redemption for the things they have done by doing good for the
+given a chance to show regret and chasing redemption for the things they have done by doing good for the
 world and its people.  
 If one is judged souly on their past I have to ask:
 
