@@ -23,3 +23,9 @@ No, I think I will just call it nothing. Makes things way easier. Or even better
 that I am able to just call it darkness.
 
 _**"Let there be light!"**_
+
+### Manuscript
+
+<div class="flex justify-center">
+    <img src="\images\IteriumSapienta\Darkness.svg" alt="manuscript" class="rounded-xl" style="background: white" />
+</div>

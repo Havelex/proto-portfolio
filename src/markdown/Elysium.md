@@ -23,3 +23,9 @@ Elysium or not, my time has yet to come, and I am neither afraid of death, not t
 follows after. Yet, I won't go without a fight.
 
 _**"Death can have me when it earns me!"**_
+
+### Manuscript
+
+<div class="flex justify-center">
+    <img src="\images\IteriumSapienta\Elysium.svg" alt="manuscript" class="rounded-xl" style="background: white" />
+</div>

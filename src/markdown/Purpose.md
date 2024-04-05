@@ -28,3 +28,9 @@ master would need a conveniently accessible mirrored surface to talk to themselv
 Now!
 
 _**"Your time has come!"**_
+
+### Manuscript
+
+<div class="flex justify-center">
+    <img src="\images\IteriumSapienta\Purpose.svg" alt="manuscript" class="rounded-xl" style="background: white" />
+</div>

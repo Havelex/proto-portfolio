@@ -28,4 +28,11 @@ I don't even know how long I've been here for, or how for how long I am awake. T
 dissolved and became unmeasurable. At least it still flows forward, but besides that, I know nothing
 but one thing:
 
-**"I need more bullets."**\_
+**"I need more bullets."**
+
+### Manuscript
+
+<div class="flex justify-center">
+    <img src="\images\IteriumSapienta\Time.svg" alt="manuscript" class="rounded-xl" style="background: white" />
+</div>
+

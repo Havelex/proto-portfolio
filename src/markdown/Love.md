@@ -27,3 +27,9 @@ Besides, someone has to run this place down here anyway. In reality, the old man
 Everything here is terrible, I love it. After all:
 
 _**"Better to reign in Hell, than serve in Heaven."**_
+
+### Manuscript
+
+<div class="flex justify-center">
+    <img src="\images\IteriumSapienta\Love.svg" alt="manuscript" class="rounded-xl" style="background: white" />
+</div>

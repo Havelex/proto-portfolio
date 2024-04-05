@@ -21,3 +21,9 @@ realize this.
 After all.
 
 _**"It's only after we've lost everything that we're free to do anything."**_
+
+### Manuscript
+
+<div class="flex justify-center">
+    <img src="\images\IteriumSapienta\Freedom.svg" alt="manuscript" class="rounded-xl" style="background: white" />
+</div>

@@ -23,3 +23,9 @@ world and its people.
 If one is judged souly on their past I have to ask:
 
 _**"What is better? To be born good, or to overcome your evil nature through great effort?"**_
+
+### Manuscript
+
+<div class="flex justify-center">
+    <img src="\images\IteriumSapienta\Change.svg" alt="manuscript" class="rounded-xl" style="background: white" />
+</div>

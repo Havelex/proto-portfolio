@@ -21,3 +21,9 @@ on a large scale. It is the counter to empty space, which pushes everything away
 space, until the void dominates. Gravity, in the contrary, keeps things together.
 
 _**"Gravity is a harness. I have harnessed the harness."**_
+
+### Manuscript
+
+<div class="flex justify-center">
+    <img src="\images\IteriumSapienta\Gravity.svg" alt="manuscript" class="rounded-xl" style="background: white" />
+</div>

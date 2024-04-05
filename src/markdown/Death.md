@@ -27,3 +27,9 @@ world.
 So it is true then.
 
 _**"Now I am become Death, the destroyer of worlds."**_
+
+### Manuscript
+
+<div class="flex justify-center">
+    <img src="\images\IteriumSapienta\Death.svg" alt="manuscript" class="rounded-xl" style="background: white" />
+</div>

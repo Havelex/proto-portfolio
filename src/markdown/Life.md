@@ -23,3 +23,9 @@ breaking your head over those man made concepts of responsibility.
 Take a break from what you can't control.
 
 _**"Live a little!"**_
+
+### Manuscript
+
+<div class="flex justify-center">
+    <img src="\images\IteriumSapienta\Life.svg" alt="manuscript" class="rounded-xl" style="background: white" />
+</div>
