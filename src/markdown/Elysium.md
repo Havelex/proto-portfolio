@@ -6,8 +6,8 @@ date: '02.02.2024'
 ---
 
 **Elysium** is the place where our loved ones wait for us after death. A paradise, home to the
-blessed in their afterlife. Elysium is the counterpart to hades, and although I yearn for Elysium to
-reunite with someone very deer to me, I doubt that I will reach it ever again. For that, the weight
+blessed in their afterlife. Elysium is the counterpart to hades, and although I yearn for it to
+reunite me with someone very deer to me, I doubt that I will reach it ever again. For that, the weight
 of the sins I carry is too heavy to let me rise up to this heavenly realm. They will pull me down to
 the underworld.  
 Despite this, I could find closure, as I have done the right thing in life and old friends are going
