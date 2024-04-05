@@ -2,7 +2,7 @@
 title: 'Purpose'
 section: 'Iterium Sapienta'
 tags: ['Final Act']
-date: '02.02.2024'
+date: '01.02.2024'
 ---
 
 **Purpose** is a concept. The concept of an obligation towards something and ultimately towards

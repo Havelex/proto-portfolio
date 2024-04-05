@@ -2,7 +2,7 @@
 title: 'Nisi Veritas'
 section: 'Lipom'
 tags: ['Lipom', 'Final Act', 'Brain Rot']
-date: '30.05.2024'
+date: '29.05.2024'
 ---
 
 ### Lopum Isid
