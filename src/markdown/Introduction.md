@@ -18,7 +18,7 @@ complicated yet 'i reality it is all most orderly structured.
 
 Alas, should'st thou aye find yourself lost, I hast prepared one of mine scrolls to provide thou
 with guidance. This spell shall take thou to the
-[explorer guide](/explore/sections/guides/posts/explorerguide).
+[explorer guide](/explore/sections/guides/posts/ExplorerGuide).
 
 > Read it if thou see no scrolls!
 

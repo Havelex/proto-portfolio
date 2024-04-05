@@ -111,6 +111,8 @@ skepticism aside, it becomes a very interesting monolog.
 
 Work time concluded ~ 30 min.
 
+---
+
 ### 13.01.2024
 
 #### Harmony
@@ -124,6 +126,8 @@ be a masterpiece, I still take liking in it.
 
 Work time concluded ~ 20 min.
 
+---
+
 ### 18.01.2024
 
 #### Change
@@ -136,6 +140,8 @@ write two more entries as I am slowly running out of ideas and ambition.
 
 Work time concluded ~ 25 min.
 
+---
+
 ### 12.02.2024
 
 #### Life
@@ -147,6 +153,8 @@ Before I try to elaborate my thoughtful choice of topic and character, I'll just
 both, because I really like the quote and wanted to feature it in my work.
 
 Work time concluded ~ 20 min.
+
+---
 
 ### 03.03.2024
 
@@ -161,9 +169,11 @@ publish.
 
 Work time concluded ~ 40 min.
 
-## 29.03.2024
+---
 
-### Nisi Veritas
+### 29.03.2024
+
+#### Nisi Veritas
 
 Today, I read Jakob's final act, and I felt a little bit inferior. Probably, because all year long,
 felt superior, that I had my final act figured out and was ahead with my work for the first time in
@@ -174,7 +184,7 @@ well written text, nevertheless.
 
 Work time concluded ~ 70 min.
 
-### Escape Room
+#### Escape Room
 
 After I gave **"Nisi Veritas"** to Jakob, so he can read, he gave me very very _constructive_
 criticism. I took that criticism to heart and decided to create a third part and since I thought it
@@ -182,6 +192,8 @@ would be nice to include something interactive for the reader. So I made a littl
 adventure, because why not?
 
 Work time concluded ~ 420 min.
+
+---
 
 ### Digitalization - Iterium Sapienta
 
