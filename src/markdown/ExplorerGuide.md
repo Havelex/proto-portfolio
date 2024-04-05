@@ -32,4 +32,4 @@ in.
 
 ##### **Important:**
 
-> If the scrolls are hidden. Thou must cast `<F5>` to conjure them.
+> If the scrolls are hidden. Thou must cast **`Mighty Page Reload`** to conjure them.
