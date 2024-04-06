@@ -24,7 +24,7 @@ I had quickly lost track of time. The first month or so I still counted the days
 realized, that there was no point in it. All I remember is the first exchange of fire. Probably,
 because it was paradox in the sense of having been over so fast, that it felt like a blink of an
 eye. Thinking back, it was presumably not much shorter, than the battles are now, but I don't know.
-I don't even know how long I've been here for, or how for how long I am awake. Time just sort of
+I don't even know how long I've been here for, or for how long I am awake. Time just sort of
 dissolved and became unmeasurable. At least it still flows forward, but besides that, I know nothing
 but one thing:
 
