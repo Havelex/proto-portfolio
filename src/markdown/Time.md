@@ -6,7 +6,7 @@ date: '02.02.2024'
 ---
 
 **Time** is one of those phenomena you don't notice unless it is against you. Time runs differently
-in these trenches. Slowly, when battle are being fought, quickly during ceasefires, where we need to
+in these trenches. Slowly, when battles are being fought, quickly during ceasefires, where we need to
 resupply and prepare for the next couple of hours of bombardment and slaughter, but it always runs
 against us. The moments that are cherishable pass in an instant, while all those dreadful ones fell like
 eternities.  
