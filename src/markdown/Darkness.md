@@ -5,6 +5,10 @@ tags: ['Final Act']
 date: '01.02.2024'
 ---
 
+<script lang="ts">
+    import Audio from "$lib/components/general/Audio.svelte";
+</script>
+
 **Darkness** is the absence of light. Henceforth, darkness requires light for its very existence. But
 this. This is not Darkness, as there has never been light. The lack of contrast results in the
 missing concept. It is neither _light_ nor _darkness_, yet it is something.  
@@ -23,6 +27,12 @@ No, I think I will just call it nothing. Makes things way easier. Or even better
 that I am able to just call it darkness.
 
 _**"Let there be light!"**_
+
+### Audio Book
+
+<Audio src="/audio/iteriumSapienta/Darkness" />
+
+_(AI Generated)_
 
 ### Manuscript
 

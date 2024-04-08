@@ -5,6 +5,10 @@ tags: ['Final Act']
 date: '01.02.2024'
 ---
 
+<script lang="ts">
+    import Audio from "$lib/components/general/Audio.svelte";
+</script>
+
 **Purpose** is a concept. The concept of an obligation towards something and ultimately towards
 oneself. An obligation which describes the pursuit of a certain goal and eventually, when this goal
 is reached, one's purpose vanishes and consequently their drive to exist fades away.  
@@ -28,6 +32,12 @@ master would need a conveniently accessible mirrored surface to talk to themselv
 Now!
 
 _**"Your time has come!"**_
+
+### Audio Book
+
+<Audio src="/audio/iteriumSapienta/Purpose" />
+
+_(AI Generated)_
 
 ### Manuscript
 

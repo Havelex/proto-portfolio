@@ -5,6 +5,10 @@ tags: ['Final Act']
 date: '02.02.2024'
 ---
 
+<script lang="ts">
+    import Audio from "$lib/components/general/Audio.svelte";
+</script>
+
 **Death** is what comes after life and yet somehow it is a part of life after all. Nevertheless,
 despite death being inevitable, it is rare, that people accept it as something natural. Obviously,
 if death is impending, one might feel uneasy, but when thinking about it, it makes more sense not to

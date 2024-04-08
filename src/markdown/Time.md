@@ -5,6 +5,10 @@ tags: ['Final Act']
 date: '02.02.2024'
 ---
 
+<script lang="ts">
+    import Audio from "$lib/components/general/Audio.svelte";
+</script>
+
 **Time** is one of those phenomena you don't notice unless it is against you. Time runs differently
 in these trenches. Slowly, when battles are being fought, quickly during ceasefires, where we need to
 resupply and prepare for the next couple of hours of bombardment and slaughter, but it always runs
@@ -28,11 +32,16 @@ I don't even know how long I've been here for, or for how long I am awake. Time 
 dissolved and became unmeasurable. At least it still flows forward, but besides that, I know nothing
 but one thing:
 
-**"I need more bullets."**
+_**"I need more bullets."**_
+
+### Audio Book
+
+<Audio src="/audio/iteriumSapienta/Time" />
+
+_(AI Generated)_
 
 ### Manuscript
 
 <div class="flex justify-center">
     <img src="\images\IteriumSapienta\Time.svg" alt="manuscript" class="rounded-xl" style="background: white" />
 </div>
-

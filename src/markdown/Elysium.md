@@ -5,6 +5,10 @@ tags: ['Final Act']
 date: '02.02.2024'
 ---
 
+<script lang="ts">
+    import Audio from "$lib/components/general/Audio.svelte";
+</script>
+
 **Elysium** is the place where our loved ones wait for us after death. A paradise, home to the
 blessed in their afterlife. Elysium is the counterpart to hades, and although I yearn for it to
 reunite me with someone very deer to me, I doubt that I will reach it ever again. For that, the weight
@@ -23,6 +27,12 @@ Elysium or not, my time has yet to come, and I am neither afraid of death, not t
 follows after. Yet, I won't go without a fight.
 
 _**"Death can have me when it earns me!"**_
+
+### Audio Book
+
+<Audio src="/audio/iteriumSapienta/Elysium" />
+
+_(AI Generated)_
 
 ### Manuscript
 

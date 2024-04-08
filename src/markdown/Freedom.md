@@ -5,6 +5,10 @@ tags: ['Final Act']
 date: '03.02.2024'
 ---
 
+<script lang="ts">
+    import Audio from "$lib/components/general/Audio.svelte";
+</script>
+
 **Freedom** is a funny word. It is constantly being used and misused by deluded people who talk
 about countries, wars, oppression and freedom, while they are shackled to the ground by their own
 social believes society has laid upon them. They are being poisoned by their false idols and images
@@ -21,6 +25,12 @@ realize this.
 After all.
 
 _**"It's only after we've lost everything that we're free to do anything."**_
+
+### Audio Book
+
+<Audio src="/audio/iteriumSapienta/Freedom" />
+
+_(AI Generated)_
 
 ### Manuscript
 

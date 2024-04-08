@@ -5,6 +5,10 @@ tags: ['Final Act']
 date: '03.02.2024'
 ---
 
+<script lang="ts">
+    import Audio from "$lib/components/general/Audio.svelte";
+</script>
+
 **Harmony** means balance. To be in agreement and rid of conflict, and it starts within oneself. If
 one is in accord with themselves, harmony may prosper. Henceforth, finding inner peace is the first
 step in bringing true peace anywhere else. If discord reigns inside, it will reflect on the outside
@@ -22,6 +26,12 @@ There is a saying.
 
 _**"Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the
 present!"**_
+
+### Audio Book
+
+<Audio src="/audio/iteriumSapienta/Harmony" />
+
+_(AI Generated)_
 
 ### Manuscript
 

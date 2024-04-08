@@ -5,6 +5,10 @@ tags: ['Final Act']
 date: '03.02.2024'
 ---
 
+<script lang="ts">
+    import Audio from "$lib/components/general/Audio.svelte";
+</script>
+
 **Change** is everywhere and can happen anywhere, anytime. It may occur slowly over time, like the
 growth of a city or a kingdom, or the graduate shift of the night sky over eons. However, change is
 noticed strongest when happening suddenly in the blink of an eye. The death of a king, a new regime
@@ -23,6 +27,12 @@ world and its people.
 If one is judged souly on their past I have to ask:
 
 _**"What is better? To be born good, or to overcome your evil nature through great effort?"**_
+
+### Audio Book
+
+<Audio src="/audio/iteriumSapienta/Change" />
+
+_(AI Generated)_
 
 ### Manuscript
 

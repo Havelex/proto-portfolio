@@ -109,10 +109,14 @@
 					const res = await fetch(`/api/comments?id=${comment.id}`, { method: 'DELETE' });
 					res.ok && invalidateAll();
 					showDeletModal = false;
-				}}><img src={mondayLeftMeBroken} alt="monday left me broken" class="h-12 w-24" /></button
+				}}>
+					Don't Delete				
+					<!-- <img src={mondayLeftMeBroken} alt="monday left me broken" class="h-12 w-24" /> -->
+				</button
 			>
 			<button class="rounded-xl bg-error px-4 py-2" on:click={() => (showDeletModal = false)}>
-				<img src={chineseBible} alt="chineseBible" class="h-12" />
+				Delete
+				<!-- <img src={chineseBible} alt="chineseBible" class="h-12" /> -->
 			</button>
 		</div>
 	</div>
