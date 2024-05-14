@@ -11,6 +11,12 @@
 
 	let filteredSections = sections;
 	let searchValue = '';
+	let selectedNode: HTMLElement;
+
+	const scrollToSelected = () => {
+		selectedNode.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	};
+
 	$: {
 		filteredSections = sections;
 		if (searchValue.trim().length > 0) {
@@ -70,12 +76,13 @@
 									return splitted[splitted.length - 1].split('.')[0];
 								})()}
 								<a
+									bind:this={selectedNode}
 									href={`/explore/sections/${item.metadata.section}/posts/${itemName}`}
 									class={`base:text-base ml-4 text-xl ${
 										$selectedItem &&
 										item.metadata.section === $selectedItem.section &&
 										item.metadata.title === $selectedItem.title &&
-										'text-accent'
+										(scrollToSelected(), 'text-accent')
 									} hover:text-secondary`}
 								>
 									<span class="text-xl sm:text-sm">{item.metadata.title}</span>
