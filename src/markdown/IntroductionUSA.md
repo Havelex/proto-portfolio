@@ -32,4 +32,4 @@ parts of the whole trip and my peers surely agree with me.
 
 Enough spoilers. Begone now and explore all my scriptures about the USA. Indulge
 in my knowledge and learn from my experiences.  
-\*\*And beware the Qu!
+_And beware the Qu!_
