@@ -70,5 +70,5 @@ You won't find something like this in an Austrian high school.
 Despite the American education system's poor reputation, some of their methods
 might not be that bad, and maybe it is time for Austrian schools, and many
 others, to realize that and try to educate themselves about possibly
-constructive change, for once. (Except for the daily pledging in the morning.
-It would probably not go well in Austria.)
+constructive change, for once. (Except for the daily pledging of allegiance in
+the morning. That would probably not end well in Austria.)
